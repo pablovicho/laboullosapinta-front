@@ -28,7 +28,7 @@ const props = {
             ext: '.jpeg',
             mime: 'image/jpeg',
             size:"500px",
-            url: 'images/bullo-galeria.jpeg',
+            url: 'https://strapi-mercedes-boullosa.s3.amazonaws.com/mercedes-boullosa.jpeg',
             previewUrl: null,
             provider: 'cloudinary',
             provider_metadata: [Object],
