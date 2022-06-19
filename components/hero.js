@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "../components/image";
 import "../styles/Home.module.css"
+import { fetchAPI } from "../lib/api";
 
 
 const Hero = () => {
@@ -10,9 +11,22 @@ const Hero = () => {
     setSeeMore(!seeMore);
   };
 
-  const description = [
-    'Mercedes Boullosa nació en una ciudad caótica, estudió de todo, y nada, enviudó antes de casarse dos veces, se casó dos veces, se divorció unas diez veces, es madre de cuatro, tía de todos, comadre de dos, pesadilla de varios, y le ha hecho a todo oficio, desde albañilería hasta la comadrería radial, porque llenar la canasta básica nunca fue sencillo pero siempre divertido, es por eso y por nada, que pinta. Porque las palabras un día no alcanzaron, porque la música era una bandera de dos sopas, y expresar, era urgente.', 'Primero le dio por pintar con todo lo que había en la cocina, hierbas, harina, pigmentos,después fue por pinceles y se puso las pilas, años más tarde, las pinturas salieron del lienzo, y esculpió madera, piedra, pero lo más, robó la basura de sus vecinos que convirtió en múltiples figuras y objetos de uso y desuso.', '“Parto sin dolor”, “la naturaleza sospecha”, “a Corazón abierto”, “Ardor”, “Lotería del corazón”, “Entre sábanas te veas”, “Jugando a la casita”, “Resistencia”, “Ciudades de ciertas”, “Ciudades desiertas”, son algunas de las series que Mercedes ha pintado, y esculpido, del 2000 a la fecha. Porque empezó tarde pero con prisa. No menciona a sus maestros por no avergonzarlos, pero los ha tenido.','Mercedes no se ha ganado un premio, ni se ha inscrito a convocatoria alguna. Nunca le han dado reconocimiento alguno y con la boca floja que tiene, lo más seguro, es que nunca lo hagan. Solo se sostiene de la trayectoria de su propio trabajo y de sus ventas. Le aterra el mercado del arte pero hela aquí, siendo valiente.'
-]
+  async function fetchAbout () {
+      const aboutRes = await fetchAPI("/about", {
+        populate: '*'
+      })
+      console.log("about: "+JSON.stringify(aboutRes.data.attributes))
+      return aboutRes.data.attributes
+}
+
+useEffect(()=> {
+  const aboutRes=fetchAbout()
+console.log("aboutRes: " + JSON.stringify(aboutRes))})
+
+  const description = ["Pinta, sí, pero también canta, escribe, compone, descompone, esculpe y de vez en cuando, escupe palabras radiales.",
+  "Ya no se acuerda dónde nació, pero sabe lo que le creció a orillas del río Pánuco, la imaginación, y lleva por sentado, una resistencia inusual y devota hacia la música, el teatro y el humor,  que se gestó en Xalapa; en el 2022, corre a la península por no salir de México y habitar sus orillas ,le queda de vicio, el abismo.",
+  "Ha hecho, radio (Como veo doy, Máscara contra cabellera, Tacos de lengua, El triángulo de las no mudas, Deletréalo, y otros), televisión (Tras la noche, Mujeres hechas en casa, El Molcajete, y otros), teatro, cabaret, comedia, stand up, y las lasañas le quedan muy buenas.",
+  "Es incapaz de realizar una fiesta infantil como lo dicta la etiqueta, pero los eventos los organiza muy bien, y hasta le pagan por ello. Así, la artista, entre pambazos, pinceles, lienzos en blanco, hijos, cazuelas y novios, se fue forjando a si misma al grado de no poder describir ni quién es, ni qué hace, pase usted, bienvenido al laberinto del artista."]
 
 const props = {
     id:0,
@@ -28,7 +42,7 @@ const props = {
             ext: '.jpeg',
             mime: 'image/jpeg',
             size:"500px",
-            url: 'https://strapi-mercedes-boullosa.s3.amazonaws.com/mercedes-boullosa.jpeg',
+            url: 'https://res.cloudinary.com/dvesljkuv/image/upload/v1656390537/bullo_galeria_75d6e75c04.jpg',
             previewUrl: null,
             provider: 'cloudinary',
             provider_metadata: [Object],
@@ -57,29 +71,29 @@ const props = {
             style={{position:"relative", layout:"responsive"}}
           />
         </div>
+        
           {seeMore ? (
+            <>{
+            description.map((paragraph, i) =>(
             <>
-              {description.map((paragraph, i) => {
-                return (
-                  <>
                     <p id={i} style={{ fontSize: "1.2em", margin: "0px" }}>
                       {paragraph}
                     </p>
-                    <br />
-                  </>
-                );
-              })}
-              <button
+                    <br/>
+            </>
+          ))}
+          <button
                 id="ver-menos"
                 onClick={(e) => handleSeeMore(e)}
               >
                 Ver menos
               </button>
-            </>
+              </>
+            
           ) : (
             <>
               <p id="description" style={{ fontSize: "1.2em" }}>
-                {description[0].substring(0, 200)}
+                {description[0].substring(0, 200)}..
               </p>
               <button
                 id="ver-mas"
