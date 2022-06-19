@@ -36,15 +36,7 @@ const Article = ({ article, categories }) => {
           />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
-              {article.attributes.author.picture && (
-                <NextImage image={article.attributes.author.picture} />
-              )}
-            </div>
             <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By {article.attributes.author.name}
-              </p>
               <p className="uk-text-meta uk-margin-remove-top">
                 <Moment format="MMM Do YYYY">
                   {article.attributes.published_at}

@@ -1,9 +1,14 @@
-import React from "react"
-import Link from "next/link"
-import NextImage from "./image"
+import React, { useState } from "react";
+import Link from "next/link";
+import NextImage from "./image";
 
 const Card = ({ article }) => {
-  console.log("category", article.attributes.category.data)
+  const [seeMore, setSeeMore] = useState(false);
+
+  const handleSeeMore = (e) => {
+    setSeeMore(!seeMore);
+  };
+
   return (
     <Link href={`/article/${article.attributes.slug}`}>
       <a className="uk-link-reset">
@@ -15,15 +20,27 @@ const Card = ({ article }) => {
             <p id="category" className="uk-text-uppercase">
               {article.attributes?.category?.name}
             </p>
-            <p id="description" className="uk-text-large">
-              {article.attributes.description}
-            </p>
+
+            {seeMore ? (
+              <>
+                <p id="description" className="uk-text-large">
+                  {article.attributes.description}
+                </p>
+                <button id="ver-menos" onClick={(e) => handleSeeMore(e)} />
+              </>
+            ) : (
+              <>
+                <p id="description" className="uk-text-large">
+                  {article.attributes.description.substring(0, 200)}
+                </p>
+                <button id="ver-mas" onClick={(e) => handleSeeMore(e)} />
+              </>
+            )}
           </div>
         </div>
       </a>
     </Link>
-  )
-}
+  );
+};
 
-export default Card
-
+export default Card;

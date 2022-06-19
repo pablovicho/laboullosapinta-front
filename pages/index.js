@@ -3,13 +3,14 @@ import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
+import Hero from "../components/hero"
 
 const Home = ({ articles, categories }) => {
   return (
     <Layout categories={categories}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <h1>La Boullosa Pinta</h1>
+          <Hero/>
           <Articles articles={articles} />
         </div>
       </div>
