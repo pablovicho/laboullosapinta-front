@@ -8,9 +8,8 @@ const Card = ({ article }) => {
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
-
   return (
-    <Link href={`/article/${article.attributes.slug}`}>
+    <Link href={"#"}>
       <a className="uk-link-reset">
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
@@ -26,15 +25,18 @@ const Card = ({ article }) => {
                 <p id="description" className="uk-text-large">
                   {article.attributes.description}
                 </p>
-                <button id="ver-menos" onClick={(e) => handleSeeMore(e)} />
+                <button id="ver-menos" onClick={(e) => handleSeeMore(e)}>Ver menos</button>
               </>
             ) : (
+              article.attributes.description && (
               <>
                 <p id="description" className="uk-text-large">
-                  {article.attributes.description.substring(0, 200)}
+                  {article?.attributes?.description?.substring(0, 200)
+                  + "(...)"}
                 </p>
-                <button id="ver-mas" onClick={(e) => handleSeeMore(e)} />
+                <button id="ver-mas" onClick={(e) => handleSeeMore(e)}>Ver más</button>
               </>
+              )
             )}
           </div>
         </div>
