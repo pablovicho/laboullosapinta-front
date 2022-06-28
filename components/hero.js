@@ -71,7 +71,7 @@ const props = {
             style={{position:"relative", layout:"responsive"}}
           />
         </div>
-        
+
           {seeMore ? (
             <>{
             description.map((paragraph, i) =>(
@@ -89,7 +89,7 @@ const props = {
                 Ver menos
               </button>
               </>
-            
+
           ) : (
             <>
               <p id="description" style={{ fontSize: "1.2em" }}>
@@ -104,7 +104,6 @@ const props = {
               </button>
             </>
           )}
-     
     </section>
     </>
   );
