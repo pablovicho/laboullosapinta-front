@@ -76,14 +76,15 @@ const props = {
             <>{
             description.map((paragraph, i) =>(
             <>
-                    <p id={i} style={{ fontSize: "1.2em", margin: "0px" }}>
+                    <p id={i} style={{ fontSize: "1.2em", marginLeft: "20px", marginRight: "20px" }}>
                       {paragraph}
+
                     </p>
-                    <br/>
             </>
           ))}
           <button
                 id="ver-menos"
+                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
                 onClick={(e) => handleSeeMore(e)}
               >
                 Ver menos
@@ -92,16 +93,17 @@ const props = {
 
           ) : (
             <>
-              <p id="description" style={{ fontSize: "1.2em" }}>
+              <p id="description" style={{ fontSize: "1.2em", marginLeft: '20px' }}>
                 {description[0].substring(0, 200)}..
-              </p>
-              <button
+                <button
                 id="ver-mas"
                 label="Ver más"
                 onClick={(e) => handleSeeMore(e)}
+                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
               >
                 Ver más
               </button>
+              </p>
             </>
           )}
     </section>

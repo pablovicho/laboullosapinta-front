@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'BlueRiver';
+  src: url('../fonts/blue_river/BlueRiverRegular.woff2') format('woff2'),
+      url('../fonts/blue_river/BlueRiverRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Santor';
+  src: url('../fonts/santor/Santor.woff2') format('woff2'),
+      url('../fonts/santor/Santor.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .container {
   padding: 0 2rem;
 }
@@ -43,6 +61,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  font-family: "Blue River"
 }
 
 .title,
@@ -106,11 +125,4 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }
