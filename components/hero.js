@@ -76,7 +76,7 @@ const props = {
             <>{
             description.map((paragraph, i) =>(
             <>
-                    <p id={i} style={{ fontSize: "1.2em", margin: "0px" }}>
+                    <p id={i} style={{ fontSize: "1.2em", marginLeft: "20px" }}>
                       {paragraph}
                     </p>
                     <br/>
@@ -92,7 +92,7 @@ const props = {
 
           ) : (
             <>
-              <p id="description" style={{ fontSize: "1.2em" }}>
+              <p id="description" style={{ fontSize: "1.2em", marginLeft: '20px' }}>
                 {description[0].substring(0, 200)}..
               </p>
               <button
