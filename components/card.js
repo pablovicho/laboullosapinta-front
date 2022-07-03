@@ -25,16 +25,21 @@ const Card = ({ article }) => {
                 <p id="description" className="uk-text-large">
                   {article.attributes.description}
                 </p>
-                <button id="ver-menos" onClick={(e) => handleSeeMore(e)}>Ver menos</button>
+                <button id="ver-menos"  
+                  style={{ backgroundColor: "transparent", borderColor: "transparent" }}
+                  onClick={(e) => handleSeeMore(e)}>Ver menos</button>
               </>
             ) : (
               article.attributes.description && (
               <>
                 <p id="description" className="uk-text-large">
                   {article?.attributes?.description?.substring(0, 200)
-                  + "(...)"}
+                  + "..."}
+                   <button id="ver-mas" 
+                   onClick={(e) => handleSeeMore(e)}
+                   style={{ backgroundColor: "transparent", borderColor: "transparent" }}
+                   >Ver más</button>
                 </p>
-                <button id="ver-mas" onClick={(e) => handleSeeMore(e)}>Ver más</button>
               </>
               )
             )}

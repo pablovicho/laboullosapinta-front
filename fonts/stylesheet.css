@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Blue River';
+    src: url('BlueRiverRegular.woff2') format('woff2'),
+        url('BlueRiverRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Santor';
+    src: url('Santor.woff2') format('woff2'),
+        url('Santor.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

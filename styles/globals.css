@@ -1,9 +1,32 @@
+@font-face {
+  font-family: 'Blue River';
+  src: url('../fonts/blue_river/BlueRiverRegular.woff2') format('woff2'),
+      url('../fonts/blue_river/BlueRiverRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Santor';
+  src: url('../fonts/santor/Santor.woff2') format('woff2'),
+      url('../fonts/santor/Santor.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Santor, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@media (max-width: 500px) {
+  html, body {
+    width: fit-content;
+    flex-direction: column;
+  }
 }
 
 a {
@@ -13,4 +36,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.title {
+  font-family: Blue River;
+  font-size: 120px;
+  text-align: center;
 }
