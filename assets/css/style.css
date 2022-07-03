@@ -95,7 +95,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-  h1 {
+  .title {
     font-size: 25px;
     font-size: 2rem;
     line-height: 1.13636;
@@ -104,19 +104,12 @@ h1 {
 }
 
 @media (max-width: 850px) {
-  h1 {
+  .title {
     font-size: 50px;
     font-size: 4rem;
     line-height: 1.13636;
     text-align: center;
   }
-}
-
-#title {
-  letter-spacing: 0.4px;
-  font-size: 22px;
-  font-size: 1.375rem;
-  line-height: 1.13636;
 }
 
 #banner {

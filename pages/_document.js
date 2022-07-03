@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
 
+const styles = `marginRight:'-450px', marginLeft:'40px'`
+
 class MyDocument extends Document {
   render() {
     return (
@@ -37,3 +39,13 @@ class MyDocument extends Document {
 }
 
 export default MyDocument
+
+// className={styles.nombredelaclase}
+{/* <style global jsx>{`
+    body {
+      margin: 0;
+      padding: 0
+    }
+`}</style> */}
+
+// style={{marginRight:'-450px', marginLeft:'40px'}}

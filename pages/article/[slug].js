@@ -17,7 +17,7 @@ const Article = ({ article, categories }) => {
   }
 
   return (
-    <Layout categories={categories.data}>
+    <Layout categories={categories.data} >
       <Seo seo={seo} />
       <div
         id="banner"
