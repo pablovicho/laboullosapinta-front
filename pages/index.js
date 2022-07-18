@@ -24,9 +24,6 @@ export async function getStaticProps() {
     fetchAPI("/articles", { populate: "*" }),
     fetchAPI("/categories", { populate: "*" }),
   ])
-
-  console.log(categoriesRes.data)
-
   return {
     props: {
       articles: articlesRes.data,
