@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "../components/image";
 import "../styles/Home.module.css"
 import { fetchAPI } from "../lib/api";
+import Slider from "./carousel";
 
 
 const Hero = () => {
@@ -10,18 +11,6 @@ const Hero = () => {
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
-
-  async function fetchAbout () {
-      const aboutRes = await fetchAPI("/about", {
-        populate: '*'
-      })
-      return aboutRes.data.attributes
-}
-
-useEffect(()=> {
-  const aboutRes=fetchAbout()
-// console.log("aboutRes: " + JSON.stringify(aboutRes))
-})
 
   const description = ["Pinta, sí, pero también canta, escribe, compone, descompone, esculpe y de vez en cuando, escupe palabras radiales.",
   "Ya no se acuerda dónde nació, pero sabe lo que le creció a orillas del río Pánuco, la imaginación, y lleva por sentado, una resistencia inusual y devota hacia la música, el teatro y el humor,  que se gestó en Xalapa; en el 2022, corre a la península por no salir de México y habitar sus orillas ,le queda de vicio, el abismo.",
@@ -64,15 +53,16 @@ const props = {
       }}
     >
 
-        <div className="uk-container" style={{ padding: "5px", display:"block"}}>
+        {/* <div className="uk-container" >
           <Image image={props}
             alt="mercedes boullosa"
             priority={true}
             style={{position:"relative", layout:"responsive"}}
           />
+        </div> */}
+        <div className="uk-container" style={{ padding: "5px", display:"block"}}>
+        <Slider />
         </div>
-
-          {seeMore ? (
             <>{
             description.map((paragraph, i) =>(
             <>
@@ -82,30 +72,7 @@ const props = {
                     </p>
             </>
           ))}
-          <button
-                id="ver-menos"
-                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-                onClick={(e) => handleSeeMore(e)}
-              >
-                Ver menos
-              </button>
-              </>
-
-          ) : (
-            <>
-              <p id="description" style={{ fontSize: "1.2em", marginLeft: '20px' }}>
-                {description[0].substring(0, 200)}..
-                <button
-                id="ver-mas"
-                label="Ver más"
-                onClick={(e) => handleSeeMore(e)}
-                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-              >
-                Ver más
-              </button>
-              </p>
             </>
-          )}
     </section>
     </>
   );

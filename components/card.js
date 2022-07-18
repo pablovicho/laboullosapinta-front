@@ -9,8 +9,8 @@ const Card = ({ article }) => {
     setSeeMore(!seeMore);
   };
   return (
-    <Link href={"#"}>
-      <a className="uk-link-reset">
+
+      <div className="uk-link-reset">
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
             <NextImage image={article.attributes.cover} />
@@ -45,8 +45,7 @@ const Card = ({ article }) => {
             )}
           </div>
         </div>
-      </a>
-    </Link>
+      </div>
   );
 };
 

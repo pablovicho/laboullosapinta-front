@@ -52,7 +52,6 @@ const Article = ({ article, categories }) => {
 
 export async function getStaticPaths() {
   const articlesRes = await fetchAPI("/articles", { fields: ["slug"] })
-  console.log(JSON.stringify(articlesRes))
 
   return {
     paths: articlesRes.data.map((article) => ({
@@ -65,7 +64,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log("slug",params.slug)
   const articlesRes = await fetchAPI("/articles", {
     filters: {
       slug: params.slug,
@@ -78,8 +76,7 @@ export async function getStaticProps({ params }) {
     },
     populate: "*",
   })
-  console.log(categoriesRes)
-
+  
   return {
     props: { article: articlesRes.data[0], categories: categoriesRes.data },
     revalidate: 1,
