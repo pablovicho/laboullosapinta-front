@@ -23,87 +23,19 @@ export const Slider = () => {
   <Carousel activeIndex={index}
   direction={direction}
   onSelect={handleSelect}
-
+  style={{alignItems: "center", justifyContent: "center", marginTop: "20px"}}
   >
-
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[0]}
-          alt={`slide 1`}
-          style={{ height: '100px'}}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[1]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[2]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[3]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[4]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[5]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[6]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[7]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[8]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[9]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 h-auto"
-          src={mediaByIndex[10]}
-          alt={`slide 1`}
-        />
-      </Carousel.Item>
+{mediaByIndex.map((media, i) => (
+      <Carousel.Item key={i}>
+      <img
+        className="d-block img-fluid"
+        src={media}
+        alt={`slide ${i}`}
+        style={{height: "600px", width: "100%", objectFit: "cover", objectPosition: "50% 10%"}}
+      />
+    </Carousel.Item>
+))
+}
 
     </Carousel>
   )

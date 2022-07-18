@@ -63,8 +63,6 @@ const props = {
         <div className="uk-container" style={{ padding: "5px", display:"block"}}>
         <Slider />
         </div>
-
-          {seeMore ? (
             <>{
             description.map((paragraph, i) =>(
             <>
@@ -74,30 +72,7 @@ const props = {
                     </p>
             </>
           ))}
-          <button
-                id="ver-menos"
-                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-                onClick={(e) => handleSeeMore(e)}
-              >
-                Ver menos
-              </button>
-              </>
-
-          ) : (
-            <>
-              <p id="description" style={{ fontSize: "1.2em", marginLeft: '20px' }}>
-                {description[0].substring(0, 200)}..
-                <button
-                id="ver-mas"
-                label="Ver más"
-                onClick={(e) => handleSeeMore(e)}
-                style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-              >
-                Ver más
-              </button>
-              </p>
             </>
-          )}
     </section>
     </>
   );
