@@ -24,6 +24,7 @@
     "react-moment": "^1.1.2"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.1.12",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6"
   }

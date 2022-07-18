@@ -12,9 +12,9 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
-  useEffect(() => {
-    import ('bootstrap/dist/js/bootstrap.js')
-}, []);
+//   useEffect(() => {
+//     import ('bootstrap/dist/js/bootstrap.js')
+// }, []);
 
   return (
     <>
