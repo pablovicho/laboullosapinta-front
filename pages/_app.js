@@ -4,12 +4,18 @@ import "../styles/globals.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
+import { useEffect } from "react";
+// import bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
+//   useEffect(() => {
+//     import ('bootstrap/dist/js/bootstrap.js')
+// }, []);
 
   return (
     <>
