@@ -51,6 +51,7 @@ code {
   font-size: 8rem;
   font-weight: normal;
   margin: 10px;
+  line-height: 1.9;
 }
 
 p {
@@ -76,6 +77,9 @@ p {
 
   #title {
     font-size: 3.5rem;
+    line-height: 1.5;
+    margin-bottom: -15px;
+    text-align: center;
   }
 
   p {

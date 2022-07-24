@@ -1,16 +1,27 @@
 import React, {useContext, useEffect, useState} from 'react'
 import AboutContext from '../context/About/AboutContext'
+import CategoriesContext from '../context/Categories/CategoriesContext'
 import { useNavigate } from 'react-router-dom';
 import axiosClient from '../config/axios';
 import Slider from '../components/carousel';
+import CategoryCard from '../components/categoryCard';
 
 export default function Home() {
-    const [aboutData, setAboutData] = useState({}); //esto es vital para que funcione al primer render: se inicializa el estado
-    const loadAboutData = async () => { //se obtienen los datos con un async
+    const [aboutData, setAboutData] = useState({});
+    const [categoriesData, setCategoriesData] = useState({});
 
+    const loadAboutData = async () => {
       const res = await axiosClient.get('https://laboullosapinta.herokuapp.com/api/about')
+      .catch(err => console.log("error getting About information", err));
       const data = res.data.data.attributes
-      setAboutData(data) //se asignan a userData con setUserData
+      setAboutData(data)
+    };
+
+    const loadCategoriesData = async () => {
+      const res = await axiosClient.get('https://laboullosapinta.herokuapp.com/api/categories')
+      .catch(err => console.log("error getting categories information", err));
+      const data = res.data.data
+      setCategoriesData(data)
     };
 
     const description = ["Pinta, sí, pero también canta, escribe, compone, descompone, esculpe y de vez en cuando, escupe palabras radiales.",
@@ -18,15 +29,18 @@ export default function Home() {
     "Ha hecho, radio (Como veo doy, Máscara contra cabellera, Tacos de lengua, El triángulo de las no mudas, Deletréalo, y otros), televisión (Tras la noche, Mujeres hechas en casa, El Molcajete, y otros), teatro, cabaret, comedia, stand up, y las lasañas le quedan muy buenas.",
     "Es incapaz de realizar una fiesta infantil como lo dicta la etiqueta, pero los eventos los organiza muy bien, y hasta le pagan por ello. Así, la artista, entre pambazos, pinceles, lienzos en blanco, hijos, cazuelas y novios, se fue forjando a si misma al grado de no poder describir ni quién es, ni qué hace, pase usted, bienvenido al laberinto del artista."]
 
-    const ctx = useContext(AboutContext);
-  const {about} = ctx;
-  console.log("aboutData: ", aboutData)
-  const navigate = useNavigate()
+    const ctxCategories = useContext(CategoriesContext);
+    console.log(ctxCategories)
 
   useEffect(() => {
     loadAboutData()
- //y al renderizar la página, se invoca el async, obteniendo los datos en userData
+    loadCategoriesData()
+    console.log("primera categoría", categoriesData[0])
   }, []);
+
+  if(categoriesData === undefined) {
+    return <>Still loading...</>;
+  }
 
     return (
         <div>
@@ -43,6 +57,12 @@ export default function Home() {
             </>
           ))}
           </div>
+          {/* {categoriesData && categoriesData.map((category) =>{
+            return(
+              <CategoryCard category={category} key={category.id}/>
+            )
+          })
+          } */}
         </div>
     )
 }
