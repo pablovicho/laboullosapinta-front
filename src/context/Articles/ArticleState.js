@@ -2,9 +2,9 @@
 
 //
 
-import { useContext, useReducer } from "react"; //es como useState
-import ArticleContext from "./ArticlesContext";
-import ArticleReducer from "./ArticlesReducer";
+import { useContext, useReducer } from "react";
+import ArticleContext from "./ArticleContext";
+import ArticleReducer from "./ArticleReducer";
 import axiosClient from "../../config/axios";
 
 const ArticleState = (props) => {
@@ -22,13 +22,11 @@ const ArticleState = (props) => {
 
   // 2. Configuración de reducer y creación del estado global
   const [globalState, dispatch] = useReducer(ArticleReducer, initialState);
-  //dipatch es una fución que cambia el estado global, le da los datos reales al reducer para que haga su propia función
 
   // 3. Funciones de cambio en estado global
-//datos reales que le vas a pasar para cambiar el estado global
 
-const getArticles = async() => {
-  const res = await axiosClient.get(`api/articles`)
+const getArticles = async(category) => {
+  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories/${category.id}`);
   const articles = res.data.data
   localStorage.setItem("articles", articles.data)
 dispatch({
@@ -37,13 +35,23 @@ dispatch({
 })
 }
 
+const getArticle = async(slug) => {
+  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/articles/${slug}`);
+  const article = res.data.data
+  localStorage.setItem("article", article.data)
+  dispatch({
+    type:"GET_ARTICLE",
+    payload:article
+    })
+    }
+
   // 4. Retorno. para que pueda retornar todos los datos, necesitamos un provider: da acceso a db
   return (
     <ArticleContext.Provider
       value={{
-        //las llaves para llamar js; llama un objeto, con el valor de moods
         articles: globalState.articles,
-        getArticles
+        getArticles,
+        getArticle
       }}
     >
       {props.children} {/*todos los children tendrán acceso a value*/}

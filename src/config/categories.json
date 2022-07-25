@@ -1,0 +1,107 @@
+
+  [
+    {
+      "id": 6,
+      "attributes": {
+        "name": "en las galerías",
+        "slug": "en-las-galerias",
+        "updatedAt": "2022-07-23T19:02:55.707Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390581/gallery_presentation_b29d71116d.jpg"
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "name": "Pintura",
+        "slug": "pintura",
+        "description":
+          "Acuarelas, acrílicas, óleos, mixtas, grabados, collages. Pinturas vendidas a través de los años de 2001 a la fecha. Si gustas mirar lo que aún tengo a la venta, puedes pasar a la tienda, mirar, es gratis.",
+        "createdAt": "2022-06-28T17:49:57.630Z",
+        "updatedAt": "2022-07-23T19:03:17.545Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446734/IMG_1532_81fa3c4e6d.jpg"
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "name": "Radio",
+        "slug": "radio",
+        "description":
+          "Podcast de temas variopintos y de temas obsesivos, poesía en voz alta, una zona para escuchar palabras al viento.",
+        "createdAt": "2022-06-28T18:20:31.678Z",
+        "updatedAt": "2022-07-23T19:03:43.682Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435744/IMG_2951_6de6a1d739.jpg"
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "name": "Escena",
+        "slug": "escena",
+        "description":
+          "De la tragedia, al humor, del teatro en la alacena, al cabaret, del canto urbano, al sacro, de la legión televisiva, a un espectador teatral, de la devoción a la insurrección, primera y tercera llamada, comenzamos.",
+        "createdAt": "2022-06-28T19:44:01.950Z",
+        "updatedAt": "2022-07-23T19:04:09.717Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/IMG_3065_9bbf81bccc.jpg"
+      }
+    },
+    {
+      "id": 1,
+      "attributes": {
+        "name": "arte objeto",
+        "slug": "objeto",
+        "description": null,
+        "createdAt": "2022-06-13T10:40:14.762Z",
+        "updatedAt": "2022-07-23T19:05:13.220Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656447401/IMG_2487_31dbd1cb52.jpg"
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "name": "Escultura",
+        "slug": "escultura",
+        "description":
+          "De cuando la imagen se salió del lienzo, se reveló para irse de relieve.",
+        "createdAt": "2022-06-28T19:46:09.994Z",
+        "updatedAt": "2022-07-23T19:07:48.263Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603207/Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee.jpg"
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "name": "Blog",
+        "slug": "blog",
+        "description":
+          "Soy de esas horribles personas que siempre tienen algo que decir, siempre conocen a alguien así, siempre les ha pasado algo como eso, pero odian los consejos, de preferencia nunca los regalan, los cobran, y las personas así tan espantosas, no pueden vivir consigo mismas si no escupen, pero escupir es muy mal educado, así que encontré que escribir, era igual de peligroso pero más políticamente correcto, escribo. ",
+        "createdAt": "2022-06-28T19:50:28.495Z",
+        "updatedAt": "2022-07-23T19:08:08.222Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435741/Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1.jpg"
+      }
+    },
+    {
+      "id": 13,
+      "attributes": {
+        "name": "Editorial",
+        "slug": "editorial",
+        "description":
+          "¿Quién en su sano juicio me publicaría? no pienso aprovecharme de mis amigos borrachines, así, que cuando pienso que algo de lo que escribo merece ser leído, le construyo su noria yo misma para que esas palabras vayan al río a dar de vueltas.",
+        "createdAt": "2022-06-28T19:53:55.927Z",
+        "updatedAt": "2022-07-23T19:09:16.270Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603349/Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80.jpg"
+      }
+    },
+    {
+      "id": 14,
+      "attributes": {
+        "name": "Cerámica",
+        "slug": "ceramica",
+        "description":
+          "De la nada, la tierra pega un brinco al fuego, y esto es lo que pasa... ",
+        "createdAt": "2022-06-28T19:55:57.489Z",
+        "updatedAt": "2022-07-23T19:11:16.728Z",
+        "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603471/hoja_en_ceramica_14bd6f8a37.jpg"
+      }
+    }
+  ]

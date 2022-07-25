@@ -21,14 +21,12 @@ const AboutState = (props) => {
 }
 
   // 2. Configuración de reducer y creación del estado global
-  const [globalState, dispatch] = useReducer(AboutReducer, initialState); //AboutReducer son todas las funciones que van a alterar el estado inicial
-  //dipatch es una fución que cambia el estado global, le da los datos reales al reducer para que haga su propia función
+  const [globalState, dispatch] = useReducer(AboutReducer, initialState);
 
   // 3. Funciones de cambio en estado global
-//datos reales que le vas a pasar para cambiar el estado global
 
 const getAbout = async() => {
-  const res = await axiosClient.get(`api/about`)
+  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/about`)
   const about = res.data.data
   localStorage.setItem("about", about)
 dispatch({
@@ -41,7 +39,6 @@ dispatch({
   return (
     <AboutContext.Provider
       value={{
-        //las llaves para llamar js; llama un objeto, con el valor de moods
         about: globalState.about,
         getAbout
       }}

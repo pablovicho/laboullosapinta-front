@@ -66,6 +66,13 @@ p {
   margin-top: 10px;
 }
 
+.categoryImage {
+  height: 20rem;
+  width: 18rem;
+  object-fit: cover;
+  object-position: 50% 10%;
+}
+
 /* PHONE VIEW */
 
 @media (max-width: 500px) {
