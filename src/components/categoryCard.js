@@ -11,31 +11,33 @@ function CategoryCard(category) {
 
   return seeMore
     ? category && (
-        <Card className="categoryImage" style={{ width: "18rem", marginLeft: "10px", marginTop: "10px", height: "fit-content" }}>
+        <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
-            <Card.Img variant="top" src={data?.attributes?.cover}
+            <Card.Img variant="top" src={data?.attributes?.cover} className="categoryImage"
             />
           </a>
           <Card.Body>
             <Card.Title>{data?.attributes?.name}</Card.Title>
-            <Card.Text>{data?.attributes?.description}</Card.Text>
+            <Card.Text>{data?.attributes?.description}
             {data?.attributes?.description?.length > 150 && (
               <button
                 id="ver-menos"
                 style={{
                   backgroundColor: "transparent",
                   borderColor: "transparent",
+                  color: "#336699"
                 }}
                 onClick={(e) => handleSeeMore(e)}
               >
                 Ver menos
               </button>
             )}
+            </Card.Text>
           </Card.Body>
         </Card>
       )
     : category && (
-        <Card style={{ width: "18rem" }}>
+        <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
             <Card.Img variant="top" src={data?.attributes?.cover} 
             className="categoryImage"/>
@@ -53,6 +55,7 @@ function CategoryCard(category) {
                     style={{
                       backgroundColor: "transparent",
                       borderColor: "transparent",
+                      color: "#336699"
                     }}
                   >
                     Ver más

@@ -12,9 +12,12 @@ const Articles = ({ category }) => {
         getArticle} = ArticleState
 
     useEffect(() => {
+      console.log("category:", category)
       getArticles(category.id)
       console.log("loading articles... ,", articlesData)
     }, []);
+
+    if(!articles) return <div>Todavía no hay artículos! Regrese al menú principal</div>
 
   return (
     <div>

@@ -1,16 +1,18 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Nav from './Header'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function Layout() {
 	return (
 		<div>
 			<div className="">
-				<Nav />
+				<Header />
 				<main className="">
 					<Outlet />
+					<Footer />
 				</main>
-
+				
 			</div>
 		</div>
 	)

@@ -68,9 +68,15 @@ p {
 
 .categoryImage {
   height: 20rem;
-  width: 18rem;
+  width: 22rem;
   object-fit: cover;
   object-position: 50% 10%;
+}
+
+.categoryCard {
+  width: 22rem;
+  margin-top: 10px;
+  height: fit-content
 }
 
 /* PHONE VIEW */

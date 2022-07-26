@@ -3,7 +3,7 @@
     {
       "id": 6,
       "attributes": {
-        "name": "en las galerías",
+        "name": "En las galerías",
         "slug": "en-las-galerias",
         "updatedAt": "2022-07-23T19:02:55.707Z",
         "cover": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390581/gallery_presentation_b29d71116d.jpg"
@@ -48,7 +48,7 @@
     {
       "id": 1,
       "attributes": {
-        "name": "arte objeto",
+        "name": "Arte objeto",
         "slug": "objeto",
         "description": null,
         "createdAt": "2022-06-13T10:40:14.762Z",

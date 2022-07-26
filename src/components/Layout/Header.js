@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import categories from '../../config/categories.json';
 
-function BasicExample() {
+function Header() {
 
   return (
     <Navbar bg="light" expand="lg">
@@ -29,4 +29,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Header;
