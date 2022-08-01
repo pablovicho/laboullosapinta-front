@@ -13,12 +13,12 @@ function CategoryCard(category) {
     ? category && (
         <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
-            <Card.Img variant="top" src={data?.attributes?.cover} className="categoryImage"
+            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url} className="categoryImage"
             />
           </a>
           <Card.Body>
             <Card.Title>{data?.attributes?.name}</Card.Title>
-            <Card.Text>{data?.attributes?.description}
+            <Card.Text style={{ textAlign: 'justify', textJustify: 'inter-word'}}>{data?.attributes?.description}
             {data?.attributes?.description?.length > 150 && (
               <button
                 id="ver-menos"
@@ -39,12 +39,12 @@ function CategoryCard(category) {
     : category && (
         <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
-            <Card.Img variant="top" src={data?.attributes?.cover} 
+            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url} 
             className="categoryImage"/>
           </a>
           <Card.Body>
             <Card.Title>{data?.attributes?.name}</Card.Title>
-            <Card.Text>
+            <Card.Text style={{ textAlign: 'justify', textJustify: 'auto'}}>
               {data?.attributes?.description?.substring(0, 150)}
               {data?.attributes?.description?.length > 150 && (
                 <>

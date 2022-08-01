@@ -1,4 +1,4 @@
-const reducer = (globalState, action) => {
+const reducer = (globalState = [], action) => {
     switch (action.type) {
 
       case "GET_ARTICLE":

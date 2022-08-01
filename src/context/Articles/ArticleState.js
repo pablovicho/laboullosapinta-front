@@ -11,53 +11,54 @@ const ArticleState = (props) => {
   // 1. Estado inicial
 
   const initialState = {
-    data: {
-      id: "",
-      attributes: {
-        title: "",
-      },
-	    meta: {},
-  }
-}
+    articles: []
+  };
 
   // 2. Configuración de reducer y creación del estado global
   const [globalState, dispatch] = useReducer(ArticleReducer, initialState);
 
   // 3. Funciones de cambio en estado global
 
-const getArticles = async(category) => {
-  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories/${category.id}`);
-  const articles = res.data.data
-  localStorage.setItem("articles", articles.data)
-dispatch({
-  type:"GET_ARTICLES",
-  payload:articles
-})
-}
+  const getArticles = async (category) => {
+    const res = await axiosClient.get(
+      `https://laboullosapinta.herokuapp.com/api/categories/${category}?populate=*`
+    );
+    const articles = res.data.data;
+    console.log("res", res)
+    console.log("articles in ArticleState: ", articles);
+    localStorage.setItem("articles", articles);
+    dispatch({
+      type: "GET_ARTICLES",
+      payload: articles,
+    });
+  };
 
-const getArticle = async(slug) => {
-  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/articles/${slug}`);
-  const article = res.data.data
-  localStorage.setItem("article", article.data)
-  dispatch({
-    type:"GET_ARTICLE",
-    payload:article
-    })
-    }
+  const getArticle = async (id) => {
+    const res = await axiosClient.get(
+      `https://laboullosapinta.herokuapp.com/api/articles/${id}?populate=*`
+    );
+    const article = res.data.data;
+    console.log("article in ArticleState", article)
+    localStorage.setItem("article", article);
+    dispatch({
+      type: "GET_ARTICLE",
+      payload: article,
+    });
+  };
 
   // 4. Retorno. para que pueda retornar todos los datos, necesitamos un provider: da acceso a db
   return (
     <ArticleContext.Provider
       value={{
         articles: globalState.articles,
+        article: globalState.article,
         getArticles,
-        getArticle
+        getArticle,
       }}
     >
       {props.children} {/*todos los children tendrán acceso a value*/}
     </ArticleContext.Provider>
   );
 };
-
 
 export default ArticleState;

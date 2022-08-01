@@ -20,18 +20,18 @@ const CategoriesState = (props) => {
 
   // 3. Funciones de cambio en estado global
   const getCategories = async() => {
-    const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/about`)
-    const list = res.data.data
-    localStorage.setItem("categories", list)
-    console.log("obteniendo categorías")
+    const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories?populate=*`)
+    const categoryList = res.data.data
+    localStorage.setItem("categories", categoryList)
+    console.log("obteniendo categorías: ", categoryList)
     dispatch({
       type: "GET_CATEGORIES",
-      payload: list,
+      payload: categoryList,
     });
   }
 
 const getCategory = async(id) => {
-  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/about/${id}`)
+  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories/${id}`)
   const selectedCategory = res.data.data
 dispatch({
   type:"GET_CATEGORY",

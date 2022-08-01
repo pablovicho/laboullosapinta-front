@@ -4,17 +4,25 @@ import ArticleState from "../context/Articles/ArticleState"
 import ArticleContext from "../context/Articles/ArticleContext"
 
 const Articles = ({ category }) => {
+  console.log("category in Articles", category)
 
-    const [articlesData, setArticlesData] = useState({});
     const ctxArticles = useContext(ArticleContext);
     const {articles,
         getArticles,
-        getArticle} = ArticleState
+        getArticle} = ctxArticles;
+
+        const fetchData = async () => {
+          await getArticles(category).then(
+            articles.forEach(article=>fetchArticle(article))
+          )
+        }
+
+        const fetchArticle = async (article) => {
+          return await getArticle(article.id)
+        }
 
     useEffect(() => {
-      console.log("category:", category)
-      getArticles(category.id)
-      console.log("loading articles... ,", articlesData)
+      fetchData()
     }, []);
 
     if(!articles) return <div>Todavía no hay artículos! Regrese al menú principal</div>

@@ -3,8 +3,6 @@ import mediaByIndex from "../utils/sliderMedia";
 import Carousel from 'react-bootstrap/Carousel';
 import '../index.css';
 
-// create a slider component with the src attributes from the mediaByIndex array
-
 export const Slider = () => {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(null);
@@ -25,7 +23,7 @@ export const Slider = () => {
   className='carousel'
   >
 {mediaByIndex.map((media, i) => (
-      <Carousel.Item key={i}>
+      <Carousel.Item key={`slide ${i}`}>
       <img
         className= 'd-block carouselImage'
         src={media}

@@ -17,7 +17,7 @@ function Header() {
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               {categories && categories.map((category) =>{
                 return (
-                  <NavDropdown.Item href={`/${category.attributes.slug}`}>{category.attributes.name}</NavDropdown.Item>
+                  <NavDropdown.Item href={`/${category.attributes.slug}`} key={category.attributes.slug}>{category.attributes.name}</NavDropdown.Item>
                 )
               })
             }

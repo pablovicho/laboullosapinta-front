@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 
 function ArticleCard(article) {
+  console.log("article in articleCard: ", article)
   const [seeMore, setSeeMore] = useState(false);
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
@@ -15,7 +16,7 @@ function ArticleCard(article) {
             <Card.Img variant="top" src={article?.attributes?.cover} />
           </a>
           <Card.Body>
-            <Card.Title>{article?.attributes?.name}</Card.Title>
+            <Card.Title>{article?.attributes?.title}</Card.Title>
             <Card.Text>{article?.attributes?.description}</Card.Text>
             {article?.attributes?.description?.length > 150 && (
             <button
