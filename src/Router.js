@@ -22,8 +22,7 @@ const Router = () => {
                 categories.map(category => {
                   return (
                     <Route path={`/${category.attributes.slug}`}
-                    element={<Articles category={category.id}/>}
-                    category={category.attributes.slug}
+                    element={<Articles category={category.id} title={category.attributes.name}/>}
                     key={category.attributes.slug}>
                     </Route>
                   )

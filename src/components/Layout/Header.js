@@ -9,11 +9,11 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand href="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" style={{display: "flex", justifyContent: "space-around"}}>
-            <Nav.Link href="#link">Tienda</Nav.Link>
+            <Nav.Link href="#">Tienda</Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               {categories && categories.map((category) =>{
                 return (

@@ -33,7 +33,7 @@ export default function Home() {
             {
             description.map((paragraph, i) =>(
             <>
-                    <p key={i}>
+                    <p key={i} style={{textAlign: 'justify', justifyContent: 'space-evenly'}}>
                       {paragraph}
 
                     </p>

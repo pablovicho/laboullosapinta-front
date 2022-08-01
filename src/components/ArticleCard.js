@@ -3,7 +3,9 @@ import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 
 function ArticleCard(article) {
-  console.log("article in articleCard: ", article)
+  const cover = article?.article.attributes.cover.data.attributes.formats.small.url
+  const title = article?.article.attributes.title
+  const description = article?.article.attributes.description
   const [seeMore, setSeeMore] = useState(false);
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
@@ -13,12 +15,12 @@ function ArticleCard(article) {
     ? article && (
         <Card>
           <a href={`/category/${article.id}`}>
-            <Card.Img variant="top" src={article?.attributes?.cover} />
+            <Card.Img variant="top" src={cover} />
           </a>
           <Card.Body>
-            <Card.Title>{article?.attributes?.title}</Card.Title>
-            <Card.Text>{article?.attributes?.description}</Card.Text>
-            {article?.attributes?.description?.length > 150 && (
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+            {description.length > 150 && (
             <button
               id="ver-menos"
               style={{
@@ -34,13 +36,13 @@ function ArticleCard(article) {
         </Card>
       )
     : article && (
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={article?.attributes?.cover} />
+        <Card className="categoryCard">
+          <Card.Img variant="top" src={cover} className="categoryImage"/>
           <Card.Body>
-            <Card.Title>{article?.attributes?.name}</Card.Title>
+            <Card.Title>{title}</Card.Title>
             <Card.Text>
-              {article?.attributes?.description?.substring(0, 150)}
-              {article?.attributes?.description?.length > 150 && (
+              {description?.substring(0, 150)}
+              {description?.length > 150 && (
                 <>
                 ...
                 <button

@@ -11,7 +11,8 @@ const ArticleState = (props) => {
   // 1. Estado inicial
 
   const initialState = {
-    articles: []
+    articlesID: [],
+    articlesData: [],
   };
 
   // 2. Configuración de reducer y creación del estado global
@@ -19,17 +20,29 @@ const ArticleState = (props) => {
 
   // 3. Funciones de cambio en estado global
 
-  const getArticles = async (category) => {
+  const getArticlesID = async (categoryID) => {
     const res = await axiosClient.get(
-      `https://laboullosapinta.herokuapp.com/api/categories/${category}?populate=*`
+      `https://laboullosapinta.herokuapp.com/api/articles/?category=${categoryID}`
     );
     const articles = res.data.data;
-    console.log("res", res)
-    console.log("articles in ArticleState: ", articles);
-    localStorage.setItem("articles", articles);
+    const articlesID = articles.map((article) => article.id);
+    localStorage.setItem("articlesID", articlesID);
     dispatch({
-      type: "GET_ARTICLES",
-      payload: articles,
+      type: "GET_ARTICLES_ID",
+      payload: articlesID,
+    });
+  };
+
+
+  const getArticlesData = async () => {
+    const res = await axiosClient.get(
+      `https://laboullosapinta.herokuapp.com/api/articles?populate=*`
+    );
+    const articlesData = res.data.data;
+    localStorage.setItem("articlesData", articlesData);
+    dispatch({
+      type: "GET_ARTICLES_DATA",
+      payload: articlesData,
     });
   };
 
@@ -38,7 +51,6 @@ const ArticleState = (props) => {
       `https://laboullosapinta.herokuapp.com/api/articles/${id}?populate=*`
     );
     const article = res.data.data;
-    console.log("article in ArticleState", article)
     localStorage.setItem("article", article);
     dispatch({
       type: "GET_ARTICLE",
@@ -50,10 +62,11 @@ const ArticleState = (props) => {
   return (
     <ArticleContext.Provider
       value={{
-        articles: globalState.articles,
-        article: globalState.article,
-        getArticles,
+        articlesID: globalState.articlesID,
+        articlesData: globalState.articlesData,
+        getArticlesID,
         getArticle,
+        getArticlesData,
       }}
     >
       {props.children} {/*todos los children tendrán acceso a value*/}

@@ -84,7 +84,7 @@ p {
 @media (max-width: 500px) {
 
   html, body {
-    width: fit-content;
+    /* width: fit-content; */
     flex-direction: column;
   }
 

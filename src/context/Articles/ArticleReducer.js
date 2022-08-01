@@ -4,14 +4,20 @@ const reducer = (globalState = [], action) => {
       case "GET_ARTICLE":
         return {
           ...globalState,
-          about: action.payload,
+          article: action.payload,
         };
 
-        case "GET_ARTICLES":
+        case "GET_ARTICLES_DATA":
         return {
           ...globalState,
-          about: action.payload,
+          articlesData: action.payload,
         };
+
+        case "GET_ARTICLES_ID":
+          return {
+            ...globalState,
+            articlesID: action.payload,
+          };
 
       default:
         return globalState;
