@@ -1,4 +1,4 @@
-import { useContext, useReducer } from "react"; //es como useState
+import { useReducer } from "react"; //es como useState
 import CategoriesContext from "./CategoriesContext";
 import CategoriesReducer from "./CategoriesReducer";
 import axiosClient from "../../config/axios";

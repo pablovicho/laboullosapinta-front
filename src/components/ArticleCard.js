@@ -1,12 +1,21 @@
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 
 function ArticleCard(article) {
-  const cover = article?.article.attributes.cover.data.attributes.formats.small.url
+  // console.log(article)
+  function ext (string) {
+    return string.split('.').pop().toLowerCase();
+  }
+
+  const cover = article.article.attributes.cover.data.attributes.url
+  // article?.article?.attributes?.cover?.data?.attributes?.formats?.small?.url ||
   const title = article?.article.attributes.title
   const description = article?.article.attributes.description
+  const extension = ext(cover)
+  console.log("file extension: ", extension)
   const [seeMore, setSeeMore] = useState(false);
+  
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
@@ -15,7 +24,28 @@ function ArticleCard(article) {
     ? article && (
         <Card>
           <a href={`/category/${article.id}`}>
-            <Card.Img variant="top" src={cover} />
+            {
+              extension === ".jpg" || extension === ".jpeg" || extension === ".png" ? 
+            <Card.Img variant="top"
+            src={cover} 
+            className="categoryImage" 
+            loading="lazy"/>
+               : 
+            extension === ".mp4" || extension === ".mkv" || extension === ".webm" || 
+            extension === ".m4v" || extension === ".mpeg4" || extension === ".mpg" ||
+            extension === ".mov" || extension === ".mpg4" ?
+              <video variant="top">
+                <source src={cover} type={`/video/${extension.substring(1)}`}/>
+              </video>
+                : 
+          extension === ".mp3" || extension === ".wav" || extension === ".wma" ||
+          extension === ".aac" || extension === ".wma" || extension === ".aiff" ||
+          extension === ".flac" || extension === ".alac" ?
+            <audio variant="top"
+            src={cover}
+            controls/>    
+                : null
+}
           </a>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
@@ -37,7 +67,28 @@ function ArticleCard(article) {
       )
     : article && (
         <Card className="categoryCard">
-          <Card.Img variant="top" src={cover} className="categoryImage"/>
+          {
+              extension === ".jpg" || extension === ".jpeg" || extension === ".png" ? 
+            <Card.Img variant="top"
+            src={cover} 
+            className="categoryImage" 
+            loading="lazy"/>
+               : 
+            extension === "mp4" || extension === ".mkv" || extension === ".webm" || 
+            extension === ".m4v" || extension === ".mpeg4" || extension === ".mpg" ||
+            extension === ".mov" || extension === ".mpg4" ?
+            <video variant="top">
+              <source src={cover} type={`video/${extension}`}/>
+            </video>
+                : 
+          extension === ".mp3" || extension === ".wav" || extension === ".wma" ||
+          extension === ".aac" || extension === ".wma" || extension === ".aiff" ||
+          extension === ".flac" || extension === ".alac" ?
+          <audio variant="top"
+          src={cover}
+          controls/>    
+                : null
+}
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>

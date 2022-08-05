@@ -2,7 +2,7 @@
 
 //
 
-import { useContext, useReducer } from "react";
+import { useReducer } from "react";
 import ArticleContext from "./ArticleContext";
 import ArticleReducer from "./ArticleReducer";
 import axiosClient from "../../config/axios";
@@ -39,6 +39,7 @@ const ArticleState = (props) => {
       `https://laboullosapinta.herokuapp.com/api/articles?populate=*`
     );
     const articlesData = res.data.data;
+    console.log("articles data: ", articlesData)
     localStorage.setItem("articlesData", articlesData);
     dispatch({
       type: "GET_ARTICLES_DATA",

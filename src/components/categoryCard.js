@@ -13,7 +13,9 @@ function CategoryCard(category) {
     ? category && (
         <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
-            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url} className="categoryImage"
+            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url ||
+            data?.attributes?.cover.data.attributes.url} 
+            className="categoryImage"
             />
           </a>
           <Card.Body>
@@ -39,7 +41,9 @@ function CategoryCard(category) {
     : category && (
         <Card className="categoryCard">
           <a href={`/${data.attributes.slug}`}>
-            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url} 
+            <Card.Img variant="top" src={data?.attributes?.cover.data.attributes.formats.small.url || 
+            data?.attributes?.cover.data.attributes.url
+          } 
             className="categoryImage"/>
           </a>
           <Card.Body>
