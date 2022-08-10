@@ -13,34 +13,33 @@ function ArticleCard(article) {
   const title = article?.article.attributes.title
   const description = article?.article.attributes.description
   const extension = ext(cover)
-  console.log("file extension: ", extension)
   const [seeMore, setSeeMore] = useState(false);
+  const videoFormats = ["mp4", "mkv", "webm", "m4v", "mpeg4", "mpg", "mov", "mpg4"]
+  const audioFormats = ["mp3", "wav", "wma", "aac", "wma", "aiff", "flac", "alac"]
   
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
 
   return seeMore
+
     ? article && (
+
         <Card>
           <a href={`/category/${article.id}`}>
             {
-              extension === ".jpg" || extension === ".jpeg" || extension === ".png" ? 
+              extension === "jpg" || extension === "jpeg" || extension === "png" ? 
             <Card.Img variant="top"
             src={cover} 
             className="categoryImage" 
             loading="lazy"/>
                : 
-            extension === ".mp4" || extension === ".mkv" || extension === ".webm" || 
-            extension === ".m4v" || extension === ".mpeg4" || extension === ".mpg" ||
-            extension === ".mov" || extension === ".mpg4" ?
-              <video variant="top">
+            videoFormats.includes(extension) ?
+              <video variant="top" controls>
                 <source src={cover} type={`/video/${extension.substring(1)}`}/>
               </video>
                 : 
-          extension === ".mp3" || extension === ".wav" || extension === ".wma" ||
-          extension === ".aac" || extension === ".wma" || extension === ".aiff" ||
-          extension === ".flac" || extension === ".alac" ?
+          audioFormats.includes(extension) ?
             <audio variant="top"
             src={cover}
             controls/>    
@@ -65,25 +64,22 @@ function ArticleCard(article) {
           </Card.Body>
         </Card>
       )
+      
     : article && (
         <Card className="categoryCard">
           {
-              extension === ".jpg" || extension === ".jpeg" || extension === ".png" ? 
+              extension === "jpg" || extension === "jpeg" || extension === "png" ? 
             <Card.Img variant="top"
             src={cover} 
             className="categoryImage" 
             loading="lazy"/>
                : 
-            extension === "mp4" || extension === ".mkv" || extension === ".webm" || 
-            extension === ".m4v" || extension === ".mpeg4" || extension === ".mpg" ||
-            extension === ".mov" || extension === ".mpg4" ?
-            <video variant="top">
+               videoFormats.includes(extension) ?
+            <video variant="top" controls>
               <source src={cover} type={`video/${extension}`}/>
             </video>
                 : 
-          extension === ".mp3" || extension === ".wav" || extension === ".wma" ||
-          extension === ".aac" || extension === ".wma" || extension === ".aiff" ||
-          extension === ".flac" || extension === ".alac" ?
+                audioFormats.includes(extension) ?
           <audio variant="top"
           src={cover}
           controls/>    

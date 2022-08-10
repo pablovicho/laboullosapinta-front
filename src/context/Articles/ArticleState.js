@@ -36,7 +36,7 @@ const ArticleState = (props) => {
 
   const getArticlesData = async () => {
     const res = await axiosClient.get(
-      `https://laboullosapinta.herokuapp.com/api/articles?populate=*`
+      `https://laboullosapinta.herokuapp.com/api/articles?populate=deep,3`
     );
     const articlesData = res.data.data;
     console.log("articles data: ", articlesData)
