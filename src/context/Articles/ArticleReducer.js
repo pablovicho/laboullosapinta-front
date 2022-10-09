@@ -13,12 +13,6 @@ const reducer = (globalState = [], action) => {
           articlesData: action.payload,
         };
 
-        case "GET_ARTICLES_ID":
-          return {
-            ...globalState,
-            articlesID: action.payload,
-          };
-
       default:
         return globalState;
     }

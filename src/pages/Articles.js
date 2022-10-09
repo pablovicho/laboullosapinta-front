@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from "react";
 import ArticleCard from "../components/ArticleCard";
-// import ArticleState from "../context/Articles/ArticleState";
 import ArticleContext from "../context/Articles/ArticleContext";
 
 const Articles = ({ category, title }) => {
@@ -9,14 +8,16 @@ const Articles = ({ category, title }) => {
     ctxArticles;
 
   const fetchData = async () => {
-    await getArticlesData();
+    await getArticlesData(category).then(
+    console.log("articles from query in Articles: ",articlesData)
+    )
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  if (articlesData.length < 1)
+  if (articlesData=== null || articlesData === undefined || articlesData.length < 1)
     return <div>Todavía no hay artículos! Regrese al menú principal</div>;
 
   return (
@@ -31,9 +32,6 @@ const Articles = ({ category, title }) => {
           }}
         >
           {articlesData
-            .filter((article) => {
-              return article.attributes.category.data.id === category
-            })
             .map((article) => {
               return (
                 <ArticleCard

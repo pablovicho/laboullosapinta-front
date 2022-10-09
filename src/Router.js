@@ -6,7 +6,6 @@ import ArticleState from './context/Articles/ArticleState'
 import categories from './config/categories.json';
 import Articles from './pages/Articles'
 
-
 // 2. FUNCIÓN
 const Router = () => {
 

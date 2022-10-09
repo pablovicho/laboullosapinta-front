@@ -8,11 +8,10 @@ function ArticleCard(article) {
     return string.split('.').pop().toLowerCase();
   }
 
-  const cover = article.article.attributes.cover.data.attributes.url
-  // article?.article?.attributes?.cover?.data?.attributes?.formats?.small?.url ||
+  const cover = article?.article?.attributes?.cover.data?.attributes.url ? article.article.attributes.cover.data.attributes.url : null
   const title = article?.article.attributes.title
-  const description = article?.article.attributes.description
-  const extension = ext(cover)
+  const description = article?.article.attributes.description 
+  const extension = cover ? ext(cover) : null
   const [seeMore, setSeeMore] = useState(false);
   const videoFormats = ["mp4", "mkv", "webm", "m4v", "mpeg4", "mpg", "mov", "mpg4"]
   const audioFormats = ["mp3", "wav", "wma", "aac", "wma", "aiff", "flac", "alac"]
@@ -60,7 +59,7 @@ function ArticleCard(article) {
             >
               Ver menos
             </button>
-            )}
+            )}            
           </Card.Body>
         </Card>
       )
