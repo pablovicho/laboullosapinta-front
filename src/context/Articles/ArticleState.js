@@ -8,7 +8,7 @@ const ArticleState = (props) => {
   // 1. Estado inicial
 
   const initialState = {
-    articlesID: [],
+    article: {},
     articlesData: [],
   };
 
@@ -23,7 +23,6 @@ const ArticleState = (props) => {
     );
     // const res = await Query(QUERY, 1);
     const articlesData = res.data.data;
-   
     console.log("articles data: ", articlesData)
     localStorage.setItem("articlesData", articlesData);
     dispatch({
@@ -37,6 +36,7 @@ const ArticleState = (props) => {
       `https://laboullosapinta.herokuapp.com/api/articles/${id}?populate=*`
     );
     const article = res.data.data;
+    console.log("article: ", article);
     localStorage.setItem("article", article);
     dispatch({
       type: "GET_ARTICLE",
@@ -51,6 +51,7 @@ const ArticleState = (props) => {
         articlesData: globalState.articlesData,
         getArticle,
         getArticlesData,
+        article: globalState.article
       }}
     >
       {props.children} {/*todos los children tendrán acceso a value*/}

@@ -5,6 +5,7 @@ import CategoriesState from './context/Categories/CategoriesState'
 import ArticleState from './context/Articles/ArticleState'
 import categories from './config/categories.json';
 import Articles from './pages/Articles'
+import SingleArticle from './pages/SingleArticle'
 
 // 2. FUNCIÓN
 const Router = () => {
@@ -17,7 +18,10 @@ const Router = () => {
 					<Routes>
 						<Route path="/" element={<Layout />}>
 							<Route index element={<Home />} />
-              {
+							<Route path={"/articles/:id"} 
+								element={<SingleArticle/>}>
+							</Route>
+			  {
                 categories.map(category => {
                   return (
                     <Route path={`/${category.attributes.slug}`}

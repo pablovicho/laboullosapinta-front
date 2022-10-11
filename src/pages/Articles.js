@@ -18,7 +18,7 @@ const Articles = ({ category, title }) => {
   }, []);
 
   if (articlesData=== null || articlesData === undefined || articlesData.length < 1)
-    return <div>Todavía no hay artículos! Regrese al menú principal</div>;
+    return <div>¡Todavía no hay artículos! Regrese al menú principal</div>;
 
   return (
     <div>

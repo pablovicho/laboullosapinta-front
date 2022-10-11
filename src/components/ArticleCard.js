@@ -1,9 +1,14 @@
-// import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 
+// import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Nav from 'react-bootstrap/Nav'
+import extension from "./articles/extension";
+import typeOfMedia from "./articles/type";
+
+
 function ArticleCard(article) {
-  // console.log(article)
+   console.log("article in card", article)
   function ext (string) {
     return string.split('.').pop().toLowerCase();
   }
@@ -24,10 +29,10 @@ function ArticleCard(article) {
 
     ? article && (
 
-        <Card>
-          <a href={`/category/${article.id}`}>
+        <Card className="categoryCard">
             {
-              extension === "jpg" || extension === "jpeg" || extension === "png" ? 
+              extension === "jpg" || extension === "jpeg" || extension === "png" ?
+
             <Card.Img variant="top"
             src={cover} 
             className="categoryImage" 
@@ -44,9 +49,14 @@ function ArticleCard(article) {
             controls/>    
                 : null
 }
-          </a>
+          
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+          <Nav.Item>
+              <Nav.Link href={`/articles/${article.article.id}`}>
+              <Card.Title>{title}</Card.Title>
+              </Nav.Link>
+            </Nav.Item>
+            
             <Card.Text>{description}</Card.Text>
             {description.length > 150 && (
             <button
@@ -66,6 +76,7 @@ function ArticleCard(article) {
       
     : article && (
         <Card className="categoryCard">
+
           {
               extension === "jpg" || extension === "jpeg" || extension === "png" ? 
             <Card.Img variant="top"
@@ -84,8 +95,15 @@ function ArticleCard(article) {
           controls/>    
                 : null
 }
+
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+          <Nav.Item>
+              <Nav.Link href={`/articles/${article.article.id}`}>
+              <Card.Title>{title}</Card.Title>
+              </Nav.Link>
+            </Nav.Item>
+              
+            
             <Card.Text>
               {description?.substring(0, 150)}
               {description?.length > 150 && (
@@ -105,6 +123,7 @@ function ArticleCard(article) {
               )}
             </Card.Text>
           </Card.Body>
+          
         </Card>
       );
 }
