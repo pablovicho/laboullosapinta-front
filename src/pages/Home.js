@@ -3,6 +3,7 @@ import React, {useContext, useEffect} from 'react'
 import CategoriesContext from '../context/Categories/CategoriesContext'
 import Slider from '../components/carousel';
 import CategoryCard from '../components/categoryCard';
+import mediaByIndex from '../utils/sliderMedia'
 // import categories from '../config/categories.json';
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
     return (
         <div>
             <h1 id='title'>La  Boullosa Pinta</h1>
-            <Slider/>
+            <Slider mediaArray={mediaByIndex}/>
             <div style={{margin: '10px'}}>
             {
             description.map((paragraph, i) =>(

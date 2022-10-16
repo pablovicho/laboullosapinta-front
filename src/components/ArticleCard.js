@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Nav from 'react-bootstrap/Nav'
-import extension from "./articles/extension";
-import typeOfMedia from "./articles/type";
+import extension from "../utils/extension";
+import typeOfMedia from "../utils/type";
 
 
 function ArticleCard(article) {

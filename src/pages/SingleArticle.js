@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 import ArticleContext from "../context/Articles/ArticleContext";
-import extension from "../components/articles/extension";
-import typeOfMedia from "../components/articles/type";
+import extension from "../utils/extension";
+import typeOfMedia from "../utils/type";
 import MediaLoader from "../components/articles/MediaLoader";
 
 const SingleArticle = () => {

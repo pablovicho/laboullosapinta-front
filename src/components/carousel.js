@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
-import mediaByIndex from "../utils/sliderMedia";
+import React, { useState, useCallback } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import '../index.css';
 
-export const Slider = () => {
+export const Slider = ({mediaArray}) => {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(null);
 
@@ -22,7 +21,7 @@ export const Slider = () => {
   onSelect={handleSelect}
   className='carousel'
   >
-{mediaByIndex.map((media, i) => (
+{mediaArray.length > 1 && mediaArray.map((media, i) => (
       <Carousel.Item key={`slide ${i}`}>
       <img
         className= 'd-block carouselImage'
