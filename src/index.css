@@ -66,6 +66,12 @@ p {
   margin-top: 10px;
 }
 
+.categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .categoryImage {
   height: 20rem;
   width: 22rem;
@@ -75,6 +81,12 @@ p {
 
 .categoryCard {
   width: 22rem;
+  margin-top: 10px;
+  height: fit-content
+}
+
+.articleCard {
+  width: 60rem;
   margin-top: 10px;
   height: fit-content
 }
@@ -97,6 +109,25 @@ p {
 
   p {
       font-size: 1.1rem;
+  }
+
+  .articleCard {
+    width: 100%;
+    height: fit-content
+  }
+
+  .categoryContainer {
+    display: block;
+  }
+
+  .categoryCard {
+    width: 100%;
+  }
+
+  .categoryImage {
+    width: 100%;
+    heigth: 20rem;
+    object-fit: cover;
   }
 
   .carouselImage {

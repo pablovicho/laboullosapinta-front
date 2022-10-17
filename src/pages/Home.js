@@ -41,7 +41,7 @@ export default function Home() {
             </>
           ))}
           </div>
-          <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
+          <div className="categoryContainer">
             {
                 categories.map((category) =>{
                   return(

@@ -27,7 +27,7 @@ function ArticleCard(article) {
 
   return seeMore ? article && (
 
-        <Card className="categoryCard">
+        <Card className="articleCard">
             
             {
             media.length > 1 ? 
@@ -61,7 +61,7 @@ function ArticleCard(article) {
       )
       
     : article && (
-        <Card className="categoryCard">
+        <Card className="articleCard">
           {
             media.length > 1 ? 
             <Slider mediaArray={media}></Slider>
