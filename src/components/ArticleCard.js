@@ -5,51 +5,37 @@ import Card from "react-bootstrap/Card";
 import Nav from 'react-bootstrap/Nav'
 import extension from "../utils/extension";
 import typeOfMedia from "../utils/type";
+import MediaLoader from "./articles/MediaLoader";
+import Slider from "./carousel";
 
 
 function ArticleCard(article) {
    console.log("article in card", article)
-  function ext (string) {
-    return string.split('.').pop().toLowerCase();
-  }
 
   const cover = article?.article?.attributes?.cover.data?.attributes.url ? article.article.attributes.cover.data.attributes.url : null
   const title = article?.article.attributes.title
-  const description = article?.article.attributes.description 
-  const extension = cover ? ext(cover) : null
+  const description = article?.article.attributes.description
+  const media = article?.article.attributes.media.data.map(mediaX => {return mediaX.attributes.url})
+
+  const coverExt = extension(cover)
+  const coverType = typeOfMedia(cover)
+
   const [seeMore, setSeeMore] = useState(false);
-  const videoFormats = ["mp4", "mkv", "webm", "m4v", "mpeg4", "mpg", "mov", "mpg4"]
-  const audioFormats = ["mp3", "wav", "wma", "aac", "wma", "aiff", "flac", "alac"]
-  
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
 
-  return seeMore
-
-    ? article && (
+  return seeMore ? article && (
 
         <Card className="categoryCard">
+            
             {
-              extension === "jpg" || extension === "jpeg" || extension === "png" ?
-
-            <Card.Img variant="top"
-            src={cover} 
-            className="categoryImage" 
-            loading="lazy"/>
-               : 
-            videoFormats.includes(extension) ?
-              <video variant="top" controls>
-                <source src={cover} type={`/video/${extension.substring(1)}`}/>
-              </video>
-                : 
-          audioFormats.includes(extension) ?
-            <audio variant="top"
-            src={cover}
-            controls/>    
-                : null
-}
-          
+            media.length > 1 ? 
+            <Slider mediaArray={media}></Slider>
+            :
+            <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
           <Card.Body>
           <Nav.Item>
               <Nav.Link href={`/articles/${article.article.id}`}>
@@ -76,26 +62,15 @@ function ArticleCard(article) {
       
     : article && (
         <Card className="categoryCard">
-
           {
-              extension === "jpg" || extension === "jpeg" || extension === "png" ? 
-            <Card.Img variant="top"
-            src={cover} 
-            className="categoryImage" 
-            loading="lazy"/>
-               : 
-               videoFormats.includes(extension) ?
-            <video variant="top" controls>
-              <source src={cover} type={`video/${extension}`}/>
-            </video>
-                : 
-                audioFormats.includes(extension) ?
-          <audio variant="top"
-          src={cover}
-          controls/>    
-                : null
-}
-
+            media.length > 1 ? 
+            <Slider mediaArray={media}></Slider>
+            :
+            <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
+            
+            
           <Card.Body>
           <Nav.Item>
               <Nav.Link href={`/articles/${article.article.id}`}>
