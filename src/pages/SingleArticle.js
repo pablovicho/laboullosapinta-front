@@ -6,47 +6,48 @@ import ArticleContext from "../context/Articles/ArticleContext";
 import extension from "../utils/extension";
 import typeOfMedia from "../utils/type";
 import MediaLoader from "../components/articles/MediaLoader";
+import Slider from "../components/carousel";
 
 const SingleArticle = () => {
     const { id } = useParams();
   const ctxArticles = useContext(ArticleContext);
   const { article, getArticle } = ctxArticles;
+  let coverMedia;
 
   const fetchData = async () => {
-    await getArticle(id)
+    await getArticle(id).then(
+      coverMedia = article.attributes?.media.data
+    )
   };
   
-
-  const title = article?.attributes?.title ? article.attributes.title : null
-  const content = article?.attributes?.content ? article.attributes.content : null
-  const media = article?.attributes?.media ? article.attributes.media.data : null
-  
-
   useEffect(() => {
     fetchData();
   }, []);
 
-  if (!article)
+  // return console.log(article)
+
+  if (article === null || article === undefined || !article) {
     return <div>¡Este artículo no existe! Regrese al menú principal</div>;
+  }
 
   return (
     <div>
       <div className="uk-child-width-1-2@s" data-uk-grid="true">
-        <h1 style={{ margin: "10px", textAlign: "center" }}>{title}</h1>
+        <h1 style={{ margin: "10px", textAlign: "center" }}>{article.attributes?.title}</h1>
         <div
           style={{
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-evenly",
           }}>
-            {media && media.map((item)=>{
-              const url = item.attributes.url
-              const ext = extension(url)
-              const type = typeOfMedia(url)
-              return (
-                MediaLoader(type, ext, url))
-            })}
-            <ReactMarkdown source={content} escapeHtml={false} >{content}</ReactMarkdown>
+            {coverMedia && 
+            article.attributes?.media.length > 1 ? 
+            <Slider mediaArray={coverMedia.map((item)=> item.attributes.url)} /> :
+            <MediaLoader type={typeOfMedia(coverMedia[0].attributes.url)} 
+                          extension={extension(coverMedia[0].attributes.url)} 
+                          media={coverMedia[0].attributes?.url}/>
+            }
+            <ReactMarkdown source={article.attributes?.content} escapeHtml={false} >{article.attributes?.content}</ReactMarkdown>
         </div>
       </div>
     </div>
