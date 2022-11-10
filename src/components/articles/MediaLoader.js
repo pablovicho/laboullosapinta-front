@@ -15,7 +15,7 @@ export default function MediaLoader({type, extension, media}){
          type === "video" ?
 
         <video variant="top" controls>
-          <source src={media} type={`/video/${extension.substring(1)}`}/>
+          <source src={media} type={`video/${extension}`}/>
         </video>
 
           :

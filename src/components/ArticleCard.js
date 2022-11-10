@@ -15,8 +15,14 @@ function ArticleCard(article) {
   const cover = article?.article?.attributes?.cover.data?.attributes.url ? article.article.attributes.cover.data.attributes.url : null
   const title = article?.article.attributes.title
   const description = article?.article.attributes.description
-  const media = article?.article.attributes.media.data.map(mediaX => {return mediaX.attributes.url})
+  const mediaLink = article?.article.attributes.mediaLink
+  const media = article?.article.attributes.media.data && 
+                article?.article.attributes.media.data
+  const mediaArray = media != null ?   
+    media.map(mediaX => {return mediaX.attributes.url})
+    : null
 
+  console.log("mediaArray in articleCard", mediaArray)     
   const coverExt = extension(cover)
   const coverType = typeOfMedia(cover)
 
@@ -28,12 +34,22 @@ function ArticleCard(article) {
   return seeMore ? article && (
 
         <Card className="articleCard">
-            
             {
-            media.length > 1 ? 
-            <Slider mediaArray={media}></Slider>
-            :
+            cover && 
             <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
+          {
+            mediaLink && 
+            <iframe width="inherit" height="inherit"
+            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          }
+            {
+            mediaArray && mediaArray.length > 1 ? 
+            <Slider mediaArray={mediaArray}></Slider>
+            :
+            <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
             </MediaLoader>
           }
           <Card.Body>
@@ -63,10 +79,21 @@ function ArticleCard(article) {
     : article && (
         <Card className="articleCard">
           {
-            media.length > 1 ? 
-            <Slider mediaArray={media}></Slider>
-            :
+            cover && 
             <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
+          {
+            mediaLink && 
+            <iframe width="inherit" height="calc(100% * 1.75)"
+            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          }
+          {
+            mediaArray && mediaArray.length > 1 ? 
+            <Slider mediaArray={mediaArray}></Slider>
+            : mediaArray &&
+            <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
             </MediaLoader>
           }
             

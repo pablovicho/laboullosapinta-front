@@ -1,4 +1,4 @@
-export default function typeOfMedia({string}) {
+export default function typeOfMedia(string) {
     const videoFormats = ["mp4", "mkv", "webm", "m4v", "mpeg4", "mpg", "mov", "mpg4"]
     const audioFormats = ["mp3", "wav", "wma", "aac", "wma", "aiff", "flac", "alac"]
     const imageFormats = ["jpg", "jpeg", "png"]
