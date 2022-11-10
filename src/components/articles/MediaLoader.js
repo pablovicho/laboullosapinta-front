@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap"
-export default function MediaLoader(type, extension, media){
+export default function MediaLoader({type, extension, media}){
+  console.log("media in MediaLoader", media)
     return (
 
         type === "image" ?
@@ -14,7 +15,7 @@ export default function MediaLoader(type, extension, media){
          type === "video" ?
 
         <video variant="top" controls>
-          <source src={media} type={`/video/${extension.substring(1)}`}/>
+          <source src={media} type={`video/${extension}`}/>
         </video>
 
           :

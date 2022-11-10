@@ -5,51 +5,53 @@ import Card from "react-bootstrap/Card";
 import Nav from 'react-bootstrap/Nav'
 import extension from "../utils/extension";
 import typeOfMedia from "../utils/type";
+import MediaLoader from "./articles/MediaLoader";
+import Slider from "./carousel";
 
 
 function ArticleCard(article) {
    console.log("article in card", article)
-  function ext (string) {
-    return string.split('.').pop().toLowerCase();
-  }
 
   const cover = article?.article?.attributes?.cover.data?.attributes.url ? article.article.attributes.cover.data.attributes.url : null
   const title = article?.article.attributes.title
-  const description = article?.article.attributes.description 
-  const extension = cover ? ext(cover) : null
+  const description = article?.article.attributes.description
+  const mediaLink = article?.article.attributes.mediaLink
+  const media = article?.article.attributes.media.data && 
+                article?.article.attributes.media.data
+  const mediaArray = media != null ?   
+    media.map(mediaX => {return mediaX.attributes.url})
+    : null
+
+  console.log("mediaArray in articleCard", mediaArray)     
+  const coverExt = extension(cover)
+  const coverType = typeOfMedia(cover)
+
   const [seeMore, setSeeMore] = useState(false);
-  const videoFormats = ["mp4", "mkv", "webm", "m4v", "mpeg4", "mpg", "mov", "mpg4"]
-  const audioFormats = ["mp3", "wav", "wma", "aac", "wma", "aiff", "flac", "alac"]
-  
   const handleSeeMore = (e) => {
     setSeeMore(!seeMore);
   };
 
-  return seeMore
+  return seeMore ? article && (
 
-    ? article && (
-
-        <Card className="categoryCard">
+        <Card className="articleCard">
             {
-              extension === "jpg" || extension === "jpeg" || extension === "png" ?
-
-            <Card.Img variant="top"
-            src={cover} 
-            className="categoryImage" 
-            loading="lazy"/>
-               : 
-            videoFormats.includes(extension) ?
-              <video variant="top" controls>
-                <source src={cover} type={`/video/${extension.substring(1)}`}/>
-              </video>
-                : 
-          audioFormats.includes(extension) ?
-            <audio variant="top"
-            src={cover}
-            controls/>    
-                : null
-}
-          
+            cover && 
+            <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
+          {
+            mediaLink && 
+            <iframe width="inherit" height="inherit"
+            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          }
+            {
+            mediaArray && mediaArray.length > 1 ? 
+            <Slider mediaArray={mediaArray}></Slider>
+            :
+            <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
+            </MediaLoader>
+          }
           <Card.Body>
           <Nav.Item>
               <Nav.Link href={`/articles/${article.article.id}`}>
@@ -75,27 +77,27 @@ function ArticleCard(article) {
       )
       
     : article && (
-        <Card className="categoryCard">
-
+        <Card className="articleCard">
           {
-              extension === "jpg" || extension === "jpeg" || extension === "png" ? 
-            <Card.Img variant="top"
-            src={cover} 
-            className="categoryImage" 
-            loading="lazy"/>
-               : 
-               videoFormats.includes(extension) ?
-            <video variant="top" controls>
-              <source src={cover} type={`video/${extension}`}/>
-            </video>
-                : 
-                audioFormats.includes(extension) ?
-          <audio variant="top"
-          src={cover}
-          controls/>    
-                : null
-}
-
+            cover && 
+            <MediaLoader type={coverType} extension={coverExt} media={cover}>
+            </MediaLoader>
+          }
+          {
+            mediaLink && 
+            <iframe width="inherit" height="calc(100% * 1.75)"
+            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+          }
+          {
+            mediaArray && mediaArray.length > 1 ? 
+            <Slider mediaArray={mediaArray}></Slider>
+            : mediaArray &&
+            <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
+            </MediaLoader>
+          }
+            
+            
           <Card.Body>
           <Nav.Item>
               <Nav.Link href={`/articles/${article.article.id}`}>
