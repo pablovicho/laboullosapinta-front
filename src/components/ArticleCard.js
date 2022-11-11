@@ -41,7 +41,7 @@ function ArticleCard(article) {
           }
           {
             mediaLink && 
-            <iframe width="inherit" height="inherit"
+            <iframe
             src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
           }
@@ -85,7 +85,7 @@ function ArticleCard(article) {
           }
           {
             mediaLink && 
-            <iframe width="inherit" height="calc(100% * 1.75)"
+            <iframe height='120%'
             src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
           }

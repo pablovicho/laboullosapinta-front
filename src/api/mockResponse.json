@@ -11,56 +11,104 @@
 				"articles": {
 					"data": [
 						{
-							"id": 11,
+							"id": 14,
 							"attributes": {
 								"title": "Bajo el ojo del hijo",
 								"description": "sin saber, Fernando Elías grababa a su madre en el umbral de un colapso, pronto cambiaría mi vida, mi taller, mi producción, mi salud. La sede es la galería Yo no fui, fue Teté en Xalapa, Veracruz, 2017.",
 								"slug": "bajo-el-ojo-del-hijo",
-								"createdAt": "2022-08-01T20:18:02.288Z",
-								"updatedAt": "2022-08-03T21:16:00.473Z",
-								"publishedAt": "2022-08-03T21:16:00.465Z",
-								"cover": {
-									"data": {
-										"id": 37,
-										"attributes": {
-											"name": "CWMW0031.MP4",
-											"alternativeText": "CWMW0031.MP4",
-											"caption": "CWMW0031.MP4",
-											"width": null,
-											"height": null,
-											"formats": null,
-											"hash": "CWMW_0031_442a7f5ff3",
-											"ext": ".MP4",
-											"mime": "video/mp4",
-											"size": 14341.05,
-											"url": "https://res.cloudinary.com/dvesljkuv/video/upload/v1659381465/CWMW_0031_442a7f5ff3.mp4",
-											"previewUrl": "http://res.cloudinary.com/dvesljkuv/video/upload/c_scale,dl_200,vs_6,w_250/CWMW_0031_442a7f5ff3.gif",
-											"provider": "cloudinary",
-											"provider_metadata": {
-												"public_id": "CWMW_0031_442a7f5ff3",
-												"resource_type": "video"
-											},
-											"createdAt": "2022-08-01T19:17:47.935Z",
-											"updatedAt": "2022-08-01T19:17:47.935Z"
-										}
-									}
-								},
-								"category": {
-									"data": {
-										"id": 6,
-										"attributes": {
-											"name": "en las galerías",
-											"slug": "en-las-galerias",
-											"description": "",
-											"createdAt": "2022-06-19T16:23:32.974Z",
-											"updatedAt": "2022-07-23T19:02:55.707Z"
-										}
-									}
-								},
-								"blocks": []
+								"createdAt": "2022-10-09T01:42:49.396Z",
+								"updatedAt": "2022-11-10T19:50:08.230Z",
+								"publishedAt": "2022-10-09T01:42:50.585Z",
+								"content": "Sin saber, Fernando Elías grababa a su madre en el umbral de un colapso, pronto cambiaría mi vida, mi taller, mi producción, mi salud. \n\nLa sede es la galería _Yo no fui, fue Teté_,\nen **Xalapa, Veracruz, 2017.**",
+								"mediaLink": "https://www.youtube.com/embed/vQIFyxHj0-Q"
+							}
+						},
+						{
+							"id": 25,
+							"attributes": {
+								"title": "las mil y un vueltas",
+								"description": "eventos de toda índole, exposiciones, subastas, demostraciones de magia, poesía, música, danza, en la galería en los altos de La Culpa, Yo no fui fue Teté, dio espacio y lugar a artistas, talleres, y creaciones de todo rubro.",
+								"slug": "las-mil-y-un-culpas",
+								"createdAt": "2022-11-10T19:17:06.628Z",
+								"updatedAt": "2022-11-10T19:21:44.575Z",
+								"publishedAt": "2022-11-10T19:21:44.570Z",
+								"content": "\nMercedes Boullosa, si bien se expone a toda clase de riesgos, procura no exponer su pintura a menos que el público venga con cartera en mano. Así es, suele mostrarse para cubrir sus más vulgares y básicas necesidades. Lleva pintando 19 años sin parar, pinta en las paredes como buena inmadura, sobre lienzos, papel, barro y telas pero más le gusta pintar castillos en el aire. Su primera exposición fue en el patio de radio universidad, luego se atrevió a exponer el jardín botánico y dos veces en el Congreso. En la Galería propia de Yo no fui, fue Teté, lleva exponiéndose descaradamente cuatro años, con Las siguientes exposiciones : Jugando a la casita, Entre sábanas, Ardor, el Corazón en un hilo, Hipertextual, Resistencia. Se ha negado a sacar su obra de Xalapa por razones muy románticas y motivos muy financieros. --\nMercedes Boullosa\n\nTexto para galería/2018",
+								"mediaLink": null
 							}
 						}
 					]
+				},
+				"cover": {
+					"data": {
+						"id": 11,
+						"attributes": {
+							"name": "gallery-presentation.jpeg",
+							"alternativeText": "gallery-presentation.jpeg",
+							"caption": "gallery-presentation.jpeg",
+							"width": 720,
+							"height": 960,
+							"formats": {
+								"small": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390582/small_gallery_presentation_b29d71116d.jpg",
+									"hash": "small_gallery_presentation_b29d71116d",
+									"mime": "image/jpeg",
+									"name": "small_gallery-presentation.jpeg",
+									"path": null,
+									"size": 39.58,
+									"width": 375,
+									"height": 500,
+									"provider_metadata": {
+										"public_id": "small_gallery_presentation_b29d71116d",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390582/medium_gallery_presentation_b29d71116d.jpg",
+									"hash": "medium_gallery_presentation_b29d71116d",
+									"mime": "image/jpeg",
+									"name": "medium_gallery-presentation.jpeg",
+									"path": null,
+									"size": 73.32,
+									"width": 563,
+									"height": 750,
+									"provider_metadata": {
+										"public_id": "medium_gallery_presentation_b29d71116d",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390581/thumbnail_gallery_presentation_b29d71116d.jpg",
+									"hash": "thumbnail_gallery_presentation_b29d71116d",
+									"mime": "image/jpeg",
+									"name": "thumbnail_gallery-presentation.jpeg",
+									"path": null,
+									"size": 6.11,
+									"width": 117,
+									"height": 156,
+									"provider_metadata": {
+										"public_id": "thumbnail_gallery_presentation_b29d71116d",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "gallery_presentation_b29d71116d",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 92.02,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656390581/gallery_presentation_b29d71116d.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "gallery_presentation_b29d71116d",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-06-28T04:29:42.773Z",
+							"updatedAt": "2022-06-28T04:29:42.773Z"
+						}
+					}
 				}
 			}
 		},
@@ -77,115 +125,20 @@
 						{
 							"id": 9,
 							"attributes": {
-								"title": "Open the f door",
-								"description": "Sobre papel, técnica mixta. Colección privada. 2017",
-								"slug": "open-the-f-door",
+								"title": "solo así...",
+								"description": "Sobre papel, óleo. Colección privada. 2017",
+								"slug": "solo-asi-pintura",
 								"createdAt": "2022-06-28T20:06:18.585Z",
-								"updatedAt": "2022-07-25T06:23:03.194Z",
+								"updatedAt": "2022-11-10T18:48:12.215Z",
 								"publishedAt": "2022-07-25T06:23:03.184Z",
-								"cover": {
-									"data": {
-										"id": 28,
-										"attributes": {
-											"name": "IMG_1532.JPG",
-											"alternativeText": "IMG_1532.JPG",
-											"caption": "IMG_1532.JPG",
-											"width": 2448,
-											"height": 2448,
-											"formats": {
-												"large": {
-													"ext": ".JPG",
-													"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446735/large_IMG_1532_81fa3c4e6d.jpg",
-													"hash": "large_IMG_1532_81fa3c4e6d",
-													"mime": "image/jpeg",
-													"name": "large_IMG_1532.JPG",
-													"path": null,
-													"size": 220.64,
-													"width": 1000,
-													"height": 1000,
-													"provider_metadata": {
-														"public_id": "large_IMG_1532_81fa3c4e6d",
-														"resource_type": "image"
-													}
-												},
-												"small": {
-													"ext": ".JPG",
-													"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446736/small_IMG_1532_81fa3c4e6d.jpg",
-													"hash": "small_IMG_1532_81fa3c4e6d",
-													"mime": "image/jpeg",
-													"name": "small_IMG_1532.JPG",
-													"path": null,
-													"size": 60.28,
-													"width": 500,
-													"height": 500,
-													"provider_metadata": {
-														"public_id": "small_IMG_1532_81fa3c4e6d",
-														"resource_type": "image"
-													}
-												},
-												"medium": {
-													"ext": ".JPG",
-													"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446736/medium_IMG_1532_81fa3c4e6d.jpg",
-													"hash": "medium_IMG_1532_81fa3c4e6d",
-													"mime": "image/jpeg",
-													"name": "medium_IMG_1532.JPG",
-													"path": null,
-													"size": 127.55,
-													"width": 750,
-													"height": 750,
-													"provider_metadata": {
-														"public_id": "medium_IMG_1532_81fa3c4e6d",
-														"resource_type": "image"
-													}
-												},
-												"thumbnail": {
-													"ext": ".JPG",
-													"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446735/thumbnail_IMG_1532_81fa3c4e6d.jpg",
-													"hash": "thumbnail_IMG_1532_81fa3c4e6d",
-													"mime": "image/jpeg",
-													"name": "thumbnail_IMG_1532.JPG",
-													"path": null,
-													"size": 6.93,
-													"width": 156,
-													"height": 156,
-													"provider_metadata": {
-														"public_id": "thumbnail_IMG_1532_81fa3c4e6d",
-														"resource_type": "image"
-													}
-												}
-											},
-											"hash": "IMG_1532_81fa3c4e6d",
-											"ext": ".JPG",
-											"mime": "image/jpeg",
-											"size": 1025.52,
-											"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656446734/IMG_1532_81fa3c4e6d.jpg",
-											"previewUrl": null,
-											"provider": "cloudinary",
-											"provider_metadata": {
-												"public_id": "IMG_1532_81fa3c4e6d",
-												"resource_type": "image"
-											},
-											"createdAt": "2022-06-28T20:05:36.976Z",
-											"updatedAt": "2022-06-28T20:05:36.976Z"
-										}
-									}
-								},
-								"category": {
-									"data": {
-										"id": 7,
-										"attributes": {
-											"name": "Pintura",
-											"slug": "pintura",
-											"description": "Acuarelas, acrílicas, óleos, mixtas, grabados, collages. Pinturas vendidas a través de los años de 2001 a la fecha. Si gustas mirar lo que aún tengo a la venta, puedes pasar a la tienda, mirar, es gratis. ",
-											"createdAt": "2022-06-28T17:49:57.630Z",
-											"updatedAt": "2022-07-23T19:03:17.545Z"
-										}
-									}
-								},
-								"blocks": []
+								"content": "con todas manos que tienes, eres un solo pie\ndesprenderme de mí quieres, mi cabeza ríe\ncon todos los piensos que eres, eres un solo pie\nmi cabeza no puede más, se va, solo así\nen mis manos está, sólo así\neres, un solo pie, no me metas el pie.",
+								"mediaLink": null
 							}
 						}
 					]
+				},
+				"cover": {
+					"data": null
 				}
 			}
 		},
@@ -198,7 +151,272 @@
 				"createdAt": "2022-06-28T18:20:31.678Z",
 				"updatedAt": "2022-07-23T19:03:43.682Z",
 				"articles": {
-					"data": []
+					"data": [
+						{
+							"id": 18,
+							"attributes": {
+								"title": "Boca",
+								"description": "Deletréalo, una plaza radial lúdica, sin madre morfológica. Cada cápsula, un round de media hora, alrededor de una sola palabra.  ",
+								"slug": "radio-boca-deletrealo",
+								"createdAt": "2022-11-09T02:19:29.499Z",
+								"updatedAt": "2022-11-09T02:19:39.532Z",
+								"publishedAt": "2022-11-09T02:19:39.529Z",
+								"content": null,
+								"mediaLink": null
+							}
+						}
+					]
+				},
+				"cover": {
+					"data": {
+						"id": 27,
+						"attributes": {
+							"name": "IMG_2951.JPG",
+							"alternativeText": "IMG_2951.JPG",
+							"caption": "IMG_2951.JPG",
+							"width": 1360,
+							"height": 1207,
+							"formats": {
+								"large": {
+									"ext": ".JPG",
+									"hash": "large_IMG_2951_6de6a1d739",
+									"mime": "image/jpeg",
+									"name": "large_IMG_2951.JPG",
+									"path": null,
+									"size": 51.83,
+									"width": 1000,
+									"height": 887,
+									"stream": {
+										"fd": null,
+										"end": null,
+										"mode": 438,
+										"path": "/tmp/strapi-upload-KFlRoR/large_IMG_2951_6de6a1d739",
+										"flags": "r",
+										"closed": true,
+										"_events": {},
+										"bytesRead": 51834,
+										"_eventsCount": 0,
+										"_readableState": {
+											"sync": false,
+											"ended": true,
+											"pipes": [],
+											"buffer": {
+												"head": null,
+												"tail": null,
+												"length": 0
+											},
+											"closed": true,
+											"length": 0,
+											"decoder": null,
+											"errored": null,
+											"flowing": false,
+											"reading": false,
+											"encoding": null,
+											"destroyed": true,
+											"emitClose": true,
+											"endEmitted": true,
+											"objectMode": false,
+											"autoDestroy": true,
+											"constructed": true,
+											"dataEmitted": true,
+											"readingMore": false,
+											"closeEmitted": true,
+											"errorEmitted": false,
+											"needReadable": false,
+											"highWaterMark": 65536,
+											"defaultEncoding": "utf8",
+											"emittedReadable": false,
+											"multiAwaitDrain": false,
+											"resumeScheduled": false,
+											"awaitDrainWriters": null,
+											"readableListening": false
+										}
+									}
+								},
+								"small": {
+									"ext": ".JPG",
+									"hash": "small_IMG_2951_6de6a1d739",
+									"mime": "image/jpeg",
+									"name": "small_IMG_2951.JPG",
+									"path": null,
+									"size": 14.54,
+									"width": 500,
+									"height": 444,
+									"stream": {
+										"fd": null,
+										"end": null,
+										"mode": 438,
+										"path": "/tmp/strapi-upload-KFlRoR/small_IMG_2951_6de6a1d739",
+										"flags": "r",
+										"closed": true,
+										"_events": {},
+										"bytesRead": 14535,
+										"_eventsCount": 0,
+										"_readableState": {
+											"sync": false,
+											"ended": true,
+											"pipes": [],
+											"buffer": {
+												"head": null,
+												"tail": null,
+												"length": 0
+											},
+											"closed": true,
+											"length": 0,
+											"decoder": null,
+											"errored": null,
+											"flowing": false,
+											"reading": false,
+											"encoding": null,
+											"destroyed": true,
+											"emitClose": true,
+											"endEmitted": true,
+											"objectMode": false,
+											"autoDestroy": true,
+											"constructed": true,
+											"dataEmitted": true,
+											"readingMore": false,
+											"closeEmitted": true,
+											"errorEmitted": false,
+											"needReadable": false,
+											"highWaterMark": 65536,
+											"defaultEncoding": "utf8",
+											"emittedReadable": false,
+											"multiAwaitDrain": false,
+											"resumeScheduled": false,
+											"awaitDrainWriters": null,
+											"readableListening": false
+										}
+									}
+								},
+								"medium": {
+									"ext": ".JPG",
+									"hash": "medium_IMG_2951_6de6a1d739",
+									"mime": "image/jpeg",
+									"name": "medium_IMG_2951.JPG",
+									"path": null,
+									"size": 30,
+									"width": 750,
+									"height": 666,
+									"stream": {
+										"fd": null,
+										"end": null,
+										"mode": 438,
+										"path": "/tmp/strapi-upload-KFlRoR/medium_IMG_2951_6de6a1d739",
+										"flags": "r",
+										"closed": true,
+										"_events": {},
+										"bytesRead": 30000,
+										"_eventsCount": 0,
+										"_readableState": {
+											"sync": false,
+											"ended": true,
+											"pipes": [],
+											"buffer": {
+												"head": null,
+												"tail": null,
+												"length": 0
+											},
+											"closed": true,
+											"length": 0,
+											"decoder": null,
+											"errored": null,
+											"flowing": false,
+											"reading": false,
+											"encoding": null,
+											"destroyed": true,
+											"emitClose": true,
+											"endEmitted": true,
+											"objectMode": false,
+											"autoDestroy": true,
+											"constructed": true,
+											"dataEmitted": true,
+											"readingMore": false,
+											"closeEmitted": true,
+											"errorEmitted": false,
+											"needReadable": false,
+											"highWaterMark": 65536,
+											"defaultEncoding": "utf8",
+											"emittedReadable": false,
+											"multiAwaitDrain": false,
+											"resumeScheduled": false,
+											"awaitDrainWriters": null,
+											"readableListening": false
+										}
+									}
+								},
+								"thumbnail": {
+									"ext": ".JPG",
+									"hash": "thumbnail_IMG_2951_6de6a1d739",
+									"mime": "image/jpeg",
+									"name": "thumbnail_IMG_2951.JPG",
+									"path": null,
+									"size": 3.36,
+									"width": 176,
+									"height": 156,
+									"stream": {
+										"fd": null,
+										"end": null,
+										"mode": 438,
+										"path": "/tmp/strapi-upload-KFlRoR/thumbnail_IMG_2951_6de6a1d739",
+										"flags": "r",
+										"closed": true,
+										"_events": {},
+										"bytesRead": 3364,
+										"_eventsCount": 0,
+										"_readableState": {
+											"sync": false,
+											"ended": true,
+											"pipes": [],
+											"buffer": {
+												"head": null,
+												"tail": null,
+												"length": 0
+											},
+											"closed": true,
+											"length": 0,
+											"decoder": null,
+											"errored": null,
+											"flowing": false,
+											"reading": false,
+											"encoding": null,
+											"destroyed": true,
+											"emitClose": true,
+											"endEmitted": true,
+											"objectMode": false,
+											"autoDestroy": true,
+											"constructed": true,
+											"dataEmitted": true,
+											"readingMore": false,
+											"closeEmitted": true,
+											"errorEmitted": false,
+											"needReadable": false,
+											"highWaterMark": 65536,
+											"defaultEncoding": "utf8",
+											"emittedReadable": false,
+											"multiAwaitDrain": false,
+											"resumeScheduled": false,
+											"awaitDrainWriters": null,
+											"readableListening": false
+										}
+									}
+								}
+							},
+							"hash": "IMG_2951_6de6a1d739",
+							"ext": ".JPG",
+							"mime": "image/jpeg",
+							"size": 89.26,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435744/IMG_2951_6de6a1d739.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "IMG_2951_6de6a1d739",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-06-28T17:02:26.603Z",
+							"updatedAt": "2022-07-18T05:07:20.705Z"
+						}
+					}
 				}
 			}
 		},
@@ -219,32 +437,111 @@
 								"description": "Ensayos, esa vida que no tiene foto aunque la haya, que no tiene cabida en el tiempo, que te hunde en un universo sin público, ese instante en el que eres familia de los que se sumergen contigo en la fantasía de ser otro que no tú. ",
 								"slug": "el-raite",
 								"createdAt": "2022-08-02T05:06:30.142Z",
-								"updatedAt": "2022-08-05T20:08:41.199Z",
+								"updatedAt": "2022-11-10T03:51:57.299Z",
 								"publishedAt": "2022-08-05T20:08:41.195Z",
-								"cover": {
-									"data": null
-								},
-								"category": {
-									"data": {
-										"id": 10,
-										"attributes": {
-											"name": "Escena",
-											"slug": "escena",
-											"description": "De la tragedia, al humor, del teatro en la alacena, al cabaret, del canto urbano, al sacro, de la legión televisiva, a un espectador teatral, de la devoción a la insurrección, primera y tercera llamada, comenzamos.",
-											"createdAt": "2022-06-28T19:44:01.950Z",
-											"updatedAt": "2022-07-23T19:04:09.717Z"
-										}
-									}
-								},
-								"blocks": [
-									{
-										"id": 4,
-										"__component": "shared.slider"
-									}
-								]
+								"content": null,
+								"mediaLink": null
+							}
+						},
+						{
+							"id": 16,
+							"attributes": {
+								"title": "Cabaret, la cantada.",
+								"description": "Los compañeros músicos que le daban todos los matices necesarios al ambiente de cabaret, aquí con uno de los compositores, Ramón Alanis, hombre orquesta. ",
+								"slug": "cabaret-cantando-escena",
+								"createdAt": "2022-11-08T23:43:26.565Z",
+								"updatedAt": "2022-11-10T18:39:14.599Z",
+								"publishedAt": "2022-11-09T03:07:04.058Z",
+								"content": null,
+								"mediaLink": null
+							}
+						},
+						{
+							"id": 24,
+							"attributes": {
+								"title": "son son",
+								"description": "descubriendo el son, entendí que eso es lo que otros son, yo no sé qué soy, con respeto me acerco, y la jarana me incita a componer, pero lo que compongo, si bien con harto corazón, son, no es, son mis canciones que no son.",
+								"slug": "son-no-son",
+								"createdAt": "2022-11-10T19:03:33.977Z",
+								"updatedAt": "2022-11-10T19:58:26.095Z",
+								"publishedAt": "2022-11-10T19:58:26.093Z",
+								"content": "En el circo de la vida, los enanos alcanzan el cielo con sus manos.\nUna mujer con su velo, te promete el universo\nUna mujer con su desvelo, te canta un verso\nUn verso con su vuelo, te alcanza a la mujer\nEn el circo de la vida, el equilibrio del desequilibrio \nDa el peso de la presencia, con una ausencia\nLos defectos se acentúan, los talentos se perpetúan\nConviviendo despacio, flotando en el espacio\nMalabares de fin de quincena, abres la alacena\nY tétrica es la escena, de pinturas y canciones, está hecha la única docena\nEn el circo de la vida, las carpas no son para siempre, las erecciones son de repente\nY los payasos lloran en una esquina… es el caos quien propone el orden\nEn el circo de la vida\nQuien te propone calma\nEs que no trae puesta el alma\nEn el circo de la vida, los enanos crecen\nLos gigantes decrecen\nY los malabaristas son más torpes que las coristas\nLa mujer araña\n¿qué crees? Que no araña, y sí se baña\nEn el circo de tu vida, es el defecto de quien acaso te ama\ntu única esperanza de ser perfecto…\n",
+								"mediaLink": null
 							}
 						}
 					]
+				},
+				"cover": {
+					"data": {
+						"id": 16,
+						"attributes": {
+							"name": "IMG_3065.JPG",
+							"alternativeText": "IMG_3065.JPG",
+							"caption": "IMG_3065.JPG",
+							"width": 960,
+							"height": 717,
+							"formats": {
+								"small": {
+									"ext": ".JPG",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435743/small_IMG_3065_9bbf81bccc.jpg",
+									"hash": "small_IMG_3065_9bbf81bccc",
+									"mime": "image/jpeg",
+									"name": "small_IMG_3065.JPG",
+									"path": null,
+									"size": 19.01,
+									"width": 500,
+									"height": 373,
+									"provider_metadata": {
+										"public_id": "small_IMG_3065_9bbf81bccc",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".JPG",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/medium_IMG_3065_9bbf81bccc.jpg",
+									"hash": "medium_IMG_3065_9bbf81bccc",
+									"mime": "image/jpeg",
+									"name": "medium_IMG_3065.JPG",
+									"path": null,
+									"size": 33.46,
+									"width": 750,
+									"height": 560,
+									"provider_metadata": {
+										"public_id": "medium_IMG_3065_9bbf81bccc",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".JPG",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/thumbnail_IMG_3065_9bbf81bccc.jpg",
+									"hash": "thumbnail_IMG_3065_9bbf81bccc",
+									"mime": "image/jpeg",
+									"name": "thumbnail_IMG_3065.JPG",
+									"path": null,
+									"size": 5.02,
+									"width": 209,
+									"height": 156,
+									"provider_metadata": {
+										"public_id": "thumbnail_IMG_3065_9bbf81bccc",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "IMG_3065_9bbf81bccc",
+							"ext": ".JPG",
+							"mime": "image/jpeg",
+							"size": 44.45,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/IMG_3065_9bbf81bccc.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "IMG_3065_9bbf81bccc",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-06-28T17:02:23.432Z",
+							"updatedAt": "2022-07-10T03:51:08.130Z"
+						}
+					}
 				}
 			}
 		},
@@ -258,6 +555,9 @@
 				"updatedAt": "2022-07-23T19:05:13.220Z",
 				"articles": {
 					"data": []
+				},
+				"cover": {
+					"data": null
 				}
 			}
 		},
@@ -270,7 +570,93 @@
 				"createdAt": "2022-06-28T19:46:09.994Z",
 				"updatedAt": "2022-07-23T19:07:48.263Z",
 				"articles": {
-					"data": []
+					"data": [
+						{
+							"id": 15,
+							"attributes": {
+								"title": "Ábrase en caso de emergencia",
+								"description": "En un caja acolchada cual ataúd, yace un corazón envenenado por su propia naturaleza dadora. El corazón es de barro de temperatura media. Madera, terciopelo, herrajes y barro. Colección privada familia Zúñiga.",
+								"slug": "abrase-en-caso-de-emergencia-escultura",
+								"createdAt": "2022-11-08T22:57:10.026Z",
+								"updatedAt": "2022-11-10T18:26:34.665Z",
+								"publishedAt": "2022-11-09T00:39:10.135Z",
+								"content": "por la boca muere el pez, pez  por la boca habla del encierro del corazón, corazón siempre listo para usarse en caso de emergencia.",
+								"mediaLink": null
+							}
+						}
+					]
+				},
+				"cover": {
+					"data": {
+						"id": 34,
+						"attributes": {
+							"name": "taller.jpeg",
+							"alternativeText": "foto del taller con un michi en primer plano.jpeg",
+							"caption": "",
+							"width": 720,
+							"height": 960,
+							"formats": {
+								"small": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603208/small_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee.jpg",
+									"hash": "small_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+									"mime": "image/jpeg",
+									"name": "small_WhatsApp Image 2022-05-19 at 9.42.07 AM (1).jpeg",
+									"path": null,
+									"size": 41.04,
+									"width": 375,
+									"height": 500,
+									"provider_metadata": {
+										"public_id": "small_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603207/medium_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee.jpg",
+									"hash": "medium_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+									"mime": "image/jpeg",
+									"name": "medium_WhatsApp Image 2022-05-19 at 9.42.07 AM (1).jpeg",
+									"path": null,
+									"size": 76.23,
+									"width": 563,
+									"height": 750,
+									"provider_metadata": {
+										"public_id": "medium_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603207/thumbnail_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee.jpg",
+									"hash": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+									"mime": "image/jpeg",
+									"name": "thumbnail_WhatsApp Image 2022-05-19 at 9.42.07 AM (1).jpeg",
+									"path": null,
+									"size": 6.13,
+									"width": 117,
+									"height": 156,
+									"provider_metadata": {
+										"public_id": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 95.38,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603207/Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "Whats_App_Image_2022_05_19_at_9_42_07_AM_1_913b91cdee",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-07-23T19:06:48.555Z",
+							"updatedAt": "2022-07-23T19:07:41.195Z"
+						}
+					}
 				}
 			}
 		},
@@ -283,7 +669,106 @@
 				"createdAt": "2022-06-28T19:50:28.495Z",
 				"updatedAt": "2022-07-23T19:08:08.222Z",
 				"articles": {
-					"data": []
+					"data": [
+						{
+							"id": 19,
+							"attributes": {
+								"title": "ay  peroporqué",
+								"description": "\nunas palabritas de inicio, como un empujón.",
+								"slug": "prologo-blog",
+								"createdAt": "2022-11-09T18:37:45.886Z",
+								"updatedAt": "2022-11-10T18:33:20.131Z",
+								"publishedAt": "2022-11-09T18:37:50.256Z",
+								"content": "Por necia, supongo. No creo que tenga sentido, no paga, pocos leen, menos entienden, y a nadie le importa un huevo, así que, ¿qué más da? escribiré. Con la libertad del canto en la regadera, escribiré, en un tú a tú con mis piensos, para que en todo caso, de haber algún lector, caray, de menos el despistado reciba un haz de honestidad. Evitaré hablar de los muy muertos y de las madrastras (también algo muertas), no porque importe o no, si no por puro miedo (temo a los berrinches), y en todo caso por respeto a los afectados indirectamente por el drama que hacen los implicados directamente, y advierto, evitar no quiere decir que me saldré con la mía, ya que puede escapar de mi dedo alguna migaja de madrastra y parientes nauseabundos, ni modo, hasta en las mejores familias hay inevitables rencores.\nMás me gustaría compartir por aquí, esos piensos que van de un lado a otro, recogiendo más piensos, retahíla de frases que suman. Uno se empeña en compartir lo bello, y guardarse lo horrible en un asco hacia la desgracia pero también en el vómito y la incomprensión se ocupan cómplices. Nada más fiel que la palabra escrita, que a pesar nuestro, va sola soltándose de juerga lo que uno trae desde la entraña y dejando en su pasar, la huella indeleble de que sí, lo dijimos, lo pensamos, no te hagas como que claro que no, esa madre, salió de tu mero tú. Aquí mi yo, por si llevas gusto, por si acaso existe alguien del otro lado de mis letras. \nNo pretendo hablar de mí, qué flojera, para todos y más para mí, que me traigo todo el día puesta, y que si bien me he caído tanto, que ya hasta me caigo bien, no viene al caso el individuo, si no el filtro del individuo de aquello que podamos compartir por este blog de mierda.\nMe rento para soñar, doctorada en pesadillas, persigo una carrera por los sueños, tengo fe en lo intangible que no tiene templo ni dios, y me va la vida en tratar de asirlo un segundo en un pienso, en clavarlo en una imagen, sombrearlo en un medio tono. Cantarlo. \nVamos pues, a seguir cavando para caer más y más hondo. \nLa Pior.",
+								"mediaLink": null
+							}
+						},
+						{
+							"id": 20,
+							"attributes": {
+								"title": "Entrevista a Manuel Monforte",
+								"description": "El blog, también que nos traiga lo que esta loca pinta le pregunta a otros. aquí, un atisbo del humor extraordinario de un artista muy completo aunque lo niegue, mordaz, corrosivo, profundo, multidisciplinario, peninsular mas adoptado por Xalapa, y una de mis personas favoritas en el universo entero.",
+								"slug": "blog-manuelmonforte-entrevista",
+								"createdAt": "2022-11-09T18:44:49.541Z",
+								"updatedAt": "2022-11-10T19:57:40.598Z",
+								"publishedAt": "2022-11-09T20:45:36.800Z",
+								"content": null,
+								"mediaLink": "https://www.youtube.com/embed/HXrbJ52NVEU"
+							}
+						}
+					]
+				},
+				"cover": {
+					"data": {
+						"id": 15,
+						"attributes": {
+							"name": "WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+							"alternativeText": "WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+							"caption": "WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+							"width": 945,
+							"height": 567,
+							"formats": {
+								"small": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/small_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1.jpg",
+									"hash": "small_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+									"mime": "image/jpeg",
+									"name": "small_WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+									"path": null,
+									"size": 37.88,
+									"width": 500,
+									"height": 300,
+									"provider_metadata": {
+										"public_id": "small_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/medium_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1.jpg",
+									"hash": "medium_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+									"mime": "image/jpeg",
+									"name": "medium_WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+									"path": null,
+									"size": 75.02,
+									"width": 750,
+									"height": 450,
+									"provider_metadata": {
+										"public_id": "medium_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435742/thumbnail_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1.jpg",
+									"hash": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+									"mime": "image/jpeg",
+									"name": "thumbnail_WhatsApp Image 2022-05-19 at 9.42.08 AM.jpeg",
+									"path": null,
+									"size": 9.38,
+									"width": 245,
+									"height": 147,
+									"provider_metadata": {
+										"public_id": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 84.56,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1656435741/Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "Whats_App_Image_2022_05_19_at_9_42_08_AM_0af6ffcaa1",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-06-28T17:02:23.323Z",
+							"updatedAt": "2022-06-28T17:02:23.323Z"
+						}
+					}
 				}
 			}
 		},
@@ -296,7 +781,106 @@
 				"createdAt": "2022-06-28T19:53:55.927Z",
 				"updatedAt": "2022-07-23T19:09:16.270Z",
 				"articles": {
-					"data": []
+					"data": [
+						{
+							"id": 10,
+							"attributes": {
+								"title": "Agendas del corazón 2017",
+								"description": "cuando todo era en papel, hasta el matrimonio, ahora que todo es de aire y botón, queda aquí una huella de lo que fuimos, hace no tanto pero lejanamente.",
+								"slug": "agendas",
+								"createdAt": "2022-06-28T20:28:45.283Z",
+								"updatedAt": "2022-11-10T04:47:03.020Z",
+								"publishedAt": "2022-11-10T02:34:53.032Z",
+								"content": null,
+								"mediaLink": null
+							}
+						},
+						{
+							"id": 13,
+							"attributes": {
+								"title": "Ardor",
+								"description": "Poesía ardiente,  y subversiva, y  a veces, erótica. Edición en caja limitada de 50 piezas numeradas que contenían grabados y poesía suelta.  posteriormente se hizo un tiraje de 100 libros en imprenta offset, cosidos a mano, con portada en grabado original. ",
+								"slug": "ardor-1",
+								"createdAt": "2022-08-12T19:02:12.517Z",
+								"updatedAt": "2022-11-10T18:28:46.940Z",
+								"publishedAt": "2022-11-09T16:14:40.211Z",
+								"content": "\"Ardemos cada cual desde su trinchera\n\n          pides detalles\n          \n                            yo los barro de la escena\".",
+								"mediaLink": null
+							}
+						}
+					]
+				},
+				"cover": {
+					"data": {
+						"id": 35,
+						"attributes": {
+							"name": "WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+							"alternativeText": "WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+							"caption": "WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+							"width": 494,
+							"height": 960,
+							"formats": {
+								"small": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603350/small_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80.jpg",
+									"hash": "small_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+									"mime": "image/jpeg",
+									"name": "small_WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+									"path": null,
+									"size": 38.23,
+									"width": 257,
+									"height": 500,
+									"provider_metadata": {
+										"public_id": "small_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603350/medium_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80.jpg",
+									"hash": "medium_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+									"mime": "image/jpeg",
+									"name": "medium_WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+									"path": null,
+									"size": 76.8,
+									"width": 386,
+									"height": 750,
+									"provider_metadata": {
+										"public_id": "medium_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603350/thumbnail_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80.jpg",
+									"hash": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+									"mime": "image/jpeg",
+									"name": "thumbnail_WhatsApp Image 2022-05-19 at 9.42.11 AM (2).jpeg",
+									"path": null,
+									"size": 4.49,
+									"width": 80,
+									"height": 156,
+									"provider_metadata": {
+										"public_id": "thumbnail_Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 101.94,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603349/Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "Whats_App_Image_2022_05_19_at_9_42_11_AM_2_f29169ce80",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-07-23T19:09:11.190Z",
+							"updatedAt": "2022-07-23T19:09:11.190Z"
+						}
+					}
 				}
 			}
 		},
@@ -310,6 +894,78 @@
 				"updatedAt": "2022-07-23T19:11:16.728Z",
 				"articles": {
 					"data": []
+				},
+				"cover": {
+					"data": {
+						"id": 36,
+						"attributes": {
+							"name": "hoja en cerámica",
+							"alternativeText": "cerámica de un cenicero con una hoja de de árbol plasmada",
+							"caption": "hoja en cerámica",
+							"width": 960,
+							"height": 960,
+							"formats": {
+								"small": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603472/small_hoja_en_ceramica_14bd6f8a37.jpg",
+									"hash": "small_hoja_en_ceramica_14bd6f8a37",
+									"mime": "image/jpeg",
+									"name": "small_hoja en cerámica",
+									"path": null,
+									"size": 24.81,
+									"width": 500,
+									"height": 500,
+									"provider_metadata": {
+										"public_id": "small_hoja_en_ceramica_14bd6f8a37",
+										"resource_type": "image"
+									}
+								},
+								"medium": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603472/medium_hoja_en_ceramica_14bd6f8a37.jpg",
+									"hash": "medium_hoja_en_ceramica_14bd6f8a37",
+									"mime": "image/jpeg",
+									"name": "medium_hoja en cerámica",
+									"path": null,
+									"size": 46.57,
+									"width": 750,
+									"height": 750,
+									"provider_metadata": {
+										"public_id": "medium_hoja_en_ceramica_14bd6f8a37",
+										"resource_type": "image"
+									}
+								},
+								"thumbnail": {
+									"ext": ".jpeg",
+									"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603472/thumbnail_hoja_en_ceramica_14bd6f8a37.jpg",
+									"hash": "thumbnail_hoja_en_ceramica_14bd6f8a37",
+									"mime": "image/jpeg",
+									"name": "thumbnail_hoja en cerámica",
+									"path": null,
+									"size": 3.83,
+									"width": 156,
+									"height": 156,
+									"provider_metadata": {
+										"public_id": "thumbnail_hoja_en_ceramica_14bd6f8a37",
+										"resource_type": "image"
+									}
+								}
+							},
+							"hash": "hoja_en_ceramica_14bd6f8a37",
+							"ext": ".jpeg",
+							"mime": "image/jpeg",
+							"size": 57.81,
+							"url": "https://res.cloudinary.com/dvesljkuv/image/upload/v1658603471/hoja_en_ceramica_14bd6f8a37.jpg",
+							"previewUrl": null,
+							"provider": "cloudinary",
+							"provider_metadata": {
+								"public_id": "hoja_en_ceramica_14bd6f8a37",
+								"resource_type": "image"
+							},
+							"createdAt": "2022-07-23T19:11:13.266Z",
+							"updatedAt": "2022-07-23T19:11:13.266Z"
+						}
+					}
 				}
 			}
 		}
