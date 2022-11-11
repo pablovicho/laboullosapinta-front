@@ -113,7 +113,8 @@ p {
 
   .articleCard {
     width: 100%;
-    height: fit-content
+    height: fit-content;
+    border: none;
   }
 
   .categoryContainer {
