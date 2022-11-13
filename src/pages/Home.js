@@ -29,7 +29,9 @@ export default function Home() {
     return (
         <div>
             <h1 id='title'>La  Boullosa Pinta</h1>
+            <div style={{display:'flex', justifyContent: 'center'}}>
             <Slider mediaArray={mediaByIndex}/>
+            </div>
             <div style={{margin: '10px'}}>
             {
             description.map((paragraph, i) =>(

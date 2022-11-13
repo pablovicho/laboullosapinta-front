@@ -21,7 +21,6 @@ const ArticleState = (props) => {
     const res = await axiosClient.get(
       `https://laboullosapinta.herokuapp.com/api/articles?filters[$and][0][category][id][$eq]=${categoryID}&populate=*`
     );
-    // const res = await Query(QUERY, 1);
     const articlesData = res.data.data;
     console.log("articles data: ", articlesData)
     localStorage.setItem("articlesData", articlesData);

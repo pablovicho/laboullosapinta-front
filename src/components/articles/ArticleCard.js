@@ -3,10 +3,10 @@ import React, { useState } from "react";
 // import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Nav from 'react-bootstrap/Nav'
-import extension from "../utils/extension";
-import typeOfMedia from "../utils/type";
-import MediaLoader from "./articles/MediaLoader";
-import Slider from "./carousel";
+import extension from "../../utils/extension";
+import typeOfMedia from "../../utils/type";
+import MediaLoader from "./MediaLoader";
+import Slider from "../carousel";
 
 
 function ArticleCard(article) {
@@ -32,34 +32,35 @@ function ArticleCard(article) {
   };
 
   return seeMore ? article && (
+    <Card className="articleCard">
+      {
+        cover && 
+        <MediaLoader type={coverType} extension={coverExt} media={cover}>
+        </MediaLoader>
+      }
+      {
+        mediaLink && 
+        <iframe height='120%'
+        src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      }
+      {
+        mediaArray && mediaArray.length > 1 ? 
+        <Slider mediaArray={mediaArray}></Slider>
+        : mediaArray &&
+        <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
+        </MediaLoader>
+      }
+        
+        
+      <Card.Body>
+      <Nav.Item>
+          <Nav.Link href={`/articles/${article.article.id}`}>
+          <Card.Title>{title}</Card.Title>
+          </Nav.Link>
+        </Nav.Item>
 
-        <Card className="articleCard">
-            {
-            cover && 
-            <MediaLoader type={coverType} extension={coverExt} media={cover}>
-            </MediaLoader>
-          }
-          {
-            mediaLink && 
-            <iframe
-            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-          }
-            {
-            mediaArray && mediaArray.length > 1 ? 
-            <Slider mediaArray={mediaArray}></Slider>
-            :
-            <MediaLoader type={typeOfMedia(mediaArray[0])} extension={extension(mediaArray[0])} media={mediaArray[0]}>
-            </MediaLoader>
-          }
-          <Card.Body>
-          <Nav.Item>
-              <Nav.Link href={`/articles/${article.article.id}`}>
-              <Card.Title>{title}</Card.Title>
-              </Nav.Link>
-            </Nav.Item>
-            
-            <Card.Text>{description}</Card.Text>
+        <Card.Text>{description}</Card.Text>
             {description.length > 150 && (
             <button
               id="ver-menos"
@@ -71,10 +72,11 @@ function ArticleCard(article) {
             >
               Ver menos
             </button>
-            )}            
-          </Card.Body>
-        </Card>
-      )
+            )}
+
+      </Card.Body>
+    </Card>
+  )
       
     : article && (
         <Card className="articleCard">

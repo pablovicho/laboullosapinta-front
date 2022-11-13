@@ -1,12 +1,9 @@
 import React, { useEffect, useContext } from "react";
-import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../components/articles/ArticleCard";
 import ArticleContext from "../context/Articles/ArticleContext";
 
 const Articles = ({ category, title }) => {
-  const ctxArticles = useContext(ArticleContext);
-  const { articlesData, getArticlesData } =
-    ctxArticles;
-
+  const { articlesData, getArticlesData } = useContext(ArticleContext);
   const fetchData = async () => {
     await getArticlesData(category).then(
     console.log("articles from query in Articles: ",articlesData)
