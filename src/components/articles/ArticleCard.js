@@ -60,7 +60,8 @@ function ArticleCard(article) {
           </Nav.Link>
         </Nav.Item>
 
-        <Card.Text>{description}</Card.Text>
+        <Card.Text style={{textAlign: "justify",
+  textJustify: "inter-word"}}>{description}</Card.Text>
             {description.length > 150 && (
             <button
               id="ver-menos"
@@ -108,7 +109,8 @@ function ArticleCard(article) {
             </Nav.Item>
               
             
-            <Card.Text>
+            <Card.Text style={{textAlign: "justify",
+  textJustify: "inter-word"}}>
               {description?.substring(0, 150)}
               {description?.length > 150 && (
                 <>
