@@ -6,7 +6,7 @@ const Articles = ({ category, title }) => {
   const { articlesData, getArticlesData } = useContext(ArticleContext);
   const fetchData = async () => {
     await getArticlesData(category).then(
-    console.log("articles from query in Articles: ",articlesData)
+    // console.log("articles from query in Articles: ",articlesData)
     )
   };
 

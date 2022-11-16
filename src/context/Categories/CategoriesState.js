@@ -13,31 +13,35 @@ const CategoriesState = (props) => {
       name: "",
       slug: "",
       description: "",
-  }
-}
+    },
+  };
   // 2. Configuración de reducer y creación del estado global
   const [globalState, dispatch] = useReducer(CategoriesReducer, initialState);
 
   // 3. Funciones de cambio en estado global
-  const getCategories = async() => {
-    const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories?populate=*`)
-    const categoryList = res.data.data
-    localStorage.setItem("categories", categoryList)
-    console.log("obteniendo categorías: ", categoryList)
+  const getCategories = async () => {
+    const res = await axiosClient.get(
+      `https://laboullosapinta.herokuapp.com/api/categories?populate=*`
+    );
+    const categoryList = res.data.data;
+    localStorage.setItem("categories", categoryList);
+    // console.log("obteniendo categorías: ", categoryList)
     dispatch({
       type: "GET_CATEGORIES",
       payload: categoryList,
     });
-  }
+  };
 
-const getCategory = async(id) => {
-  const res = await axiosClient.get(`https://laboullosapinta.herokuapp.com/api/categories/${id}`)
-  const selectedCategory = res.data.data
-dispatch({
-  type:"GET_CATEGORY",
-  payload:selectedCategory
-})
-}
+  const getCategory = async (id) => {
+    const res = await axiosClient.get(
+      `https://laboullosapinta.herokuapp.com/api/categories/${id}`
+    );
+    const selectedCategory = res.data.data;
+    dispatch({
+      type: "GET_CATEGORY",
+      payload: selectedCategory,
+    });
+  };
 
   // 4. Retorno de todos los datos, el provider da acceso a la db
   return (
@@ -53,6 +57,5 @@ dispatch({
     </CategoriesContext.Provider>
   );
 };
-
 
 export default CategoriesState;

@@ -3,10 +3,11 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 import ArticleContext from "../context/Articles/ArticleContext";
+
 import extension from "../utils/extension";
 import typeOfMedia from "../utils/type";
+
 import MediaLoader from "../components/articles/MediaLoader";
-import Slider from "../components/carousel";
 import SliderOrMedia from "../components/SliderOrMedia";
 
 const SingleArticle = () => {
@@ -44,34 +45,35 @@ const SingleArticle = () => {
           }}
         >
           <div className="articleCard">
-          {article.attributes.cover && (
-            <MediaLoader
-              type={typeOfMedia(article.attributes.cover.data.attributes.url)}
-              extension={extension(
-                article.attributes.cover.data.attributes.url
-              )}
-              media={article.attributes.cover.data.attributes.url}
-            ></MediaLoader>
-          )}
+            {article.attributes.cover && article.attributes.cover.data && (
+              <MediaLoader
+                type={typeOfMedia(article.attributes.cover.data.attributes.url)}
+                extension={extension(article.attributes.cover.data.attributes.url)}
+                media={article.attributes.cover.data.attributes.url}
+              ></MediaLoader>
+            )}
           </div>
           {article.attributes.mediaLink && (
             <iframe
               className="mediaLink"
               src={article.attributes.mediaLink}
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           )}
-          
-            <SliderOrMedia media={article.attributes.media.data} />
-          
+
+          <SliderOrMedia media={article.attributes.media.data} />
+
           {article.attributes.content && (
-            <ReactMarkdown className="contentDescription">{article.attributes.content}</ReactMarkdown>
+            <ReactMarkdown className="contentDescription">
+              {article.attributes.content}
+            </ReactMarkdown>
           )}
           {article.attributes.description && (
-            <ReactMarkdown className="contentDescription">{article.attributes.description}</ReactMarkdown>
+            <ReactMarkdown className="contentDescription">
+              {article.attributes.description}
+            </ReactMarkdown>
           )}
         </div>
       </div>

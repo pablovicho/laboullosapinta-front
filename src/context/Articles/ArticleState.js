@@ -22,7 +22,7 @@ const ArticleState = (props) => {
       `https://laboullosapinta.herokuapp.com/api/articles?filters[$and][0][category][id][$eq]=${categoryID}&populate=*`
     );
     const articlesData = res.data.data;
-    console.log("articles data: ", articlesData)
+    // console.log("articles data: ", articlesData)
     localStorage.setItem("articlesData", articlesData);
     dispatch({
       type: "GET_ARTICLES_DATA",

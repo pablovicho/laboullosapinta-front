@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import '../index.css';
 
 export const Slider = ({mediaArray}) => {
-  console.log(mediaArray)
+  // console.log(mediaArray)
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(null);
 

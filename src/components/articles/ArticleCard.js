@@ -22,7 +22,7 @@ function ArticleCard(article) {
     media.map(mediaX => {return mediaX.attributes.url})
     : null
 
-  console.log("mediaArray in articleCard", mediaArray)     
+  // console.log("mediaArray in articleCard", mediaArray)     
   const coverExt = extension(cover)
   const coverType = typeOfMedia(cover)
 
@@ -40,8 +40,8 @@ function ArticleCard(article) {
       }
       {
         mediaLink && 
-        <iframe height='120%'
-        src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <iframe height='120%' style={{aspectRatio: 16/9, border: 'none'}}
+        src={mediaLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
         </iframe>
       }
       {
@@ -88,8 +88,8 @@ function ArticleCard(article) {
           }
           {
             mediaLink && 
-            <iframe height='120%'
-            src={mediaLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <iframe height='120%' style={{aspectRatio: 16/9, border: 'none'}}
+            src={mediaLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
             </iframe>
           }
           {

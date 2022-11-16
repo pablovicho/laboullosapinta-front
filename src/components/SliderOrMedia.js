@@ -4,7 +4,7 @@ import typeOfMedia from "../utils/type";
 import extension from "../utils/extension";
 
 export default function SliderOrMedia({ media }) {
-  console.log("media in sliderOrMedia",media);
+  // console.log("media in sliderOrMedia",media);
   if (!media) return;
   if (media.length < 1)
     return;

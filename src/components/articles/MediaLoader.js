@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap"
 export default function MediaLoader({type, extension, media}){
-  console.log("media in MediaLoader", media)
+  // console.log("media in MediaLoader", media)
     return (
 
         type === "image" ?
