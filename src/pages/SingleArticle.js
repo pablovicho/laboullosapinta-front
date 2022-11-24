@@ -35,6 +35,10 @@ const SingleArticle = () => {
     dataFetch();
   }, []);
 
+  const handleClick = () => {
+    navigator.clipboard.writeText(currentUrl)
+  }
+
   if (
     article.attributes === null ||
     article.attributes === undefined ||
@@ -91,21 +95,19 @@ const SingleArticle = () => {
             </ReactMarkdown>
           )}
           <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-            <FacebookShareButton url={currentUrl}>
+            <FacebookShareButton className='shareButton' url={currentUrl}>
               <FacebookIcon size={36} round={true}></FacebookIcon>
             </FacebookShareButton>
-            <InstapaperShareButton url={currentUrl}>
-              <InstapaperIcon size={36} round={true}></InstapaperIcon>
-            </InstapaperShareButton>
-            <TwitterShareButton url={currentUrl}>
+            <TwitterShareButton className='shareButton' url={currentUrl}>
               <TwitterIcon size={36} round={true}></TwitterIcon>
             </TwitterShareButton>
-            <WhatsappShareButton url={currentUrl}>
+            <WhatsappShareButton className='shareButton' url={currentUrl}>
               <WhatsappIcon size={36} round={true}></WhatsappIcon>
             </WhatsappShareButton>
-            <TelegramShareButton url={currentUrl}>
-              <TelegramIcon size={36} round={true}></TelegramIcon>
-            </TelegramShareButton>
+            <button className='shareButton' style={{border:'none', background:'none'}} onClick={handleClick()}>
+              <img src="/shareIcon.png" alt="shareButton"
+              style={{height:'36px', width:'36px'}}/>
+            </button>
           </div>
         </div>
       </div>

@@ -108,6 +108,15 @@ p {
   margin-top: 10px;
 }
 
+.shareButton {
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.shareButton:active {
+  transform: scale(0.85);
+}
+
 /* PHONE VIEW */
 
 @media (max-width: 500px) {
