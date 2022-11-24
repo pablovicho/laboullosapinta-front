@@ -1,6 +1,18 @@
 import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import {
+  FacebookShareButton,
+  InstapaperShareButton,
+  WhatsappShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  FacebookIcon,
+  InstapaperIcon,
+  TwitterIcon,
+  WhatsappIcon,
+  TelegramIcon,
+} from "react-share";
 
 import ArticleContext from "../context/Articles/ArticleContext";
 
@@ -13,6 +25,7 @@ import SliderOrMedia from "../components/SliderOrMedia";
 const SingleArticle = () => {
   const { id } = useParams();
   const { article, getArticle } = useContext(ArticleContext);
+  const currentUrl = window.location.href;
 
   useEffect(() => {
     // fetch data
@@ -48,7 +61,9 @@ const SingleArticle = () => {
             {article.attributes.cover && article.attributes.cover.data && (
               <MediaLoader
                 type={typeOfMedia(article.attributes.cover.data.attributes.url)}
-                extension={extension(article.attributes.cover.data.attributes.url)}
+                extension={extension(
+                  article.attributes.cover.data.attributes.url
+                )}
                 media={article.attributes.cover.data.attributes.url}
               ></MediaLoader>
             )}
@@ -75,6 +90,23 @@ const SingleArticle = () => {
               {article.attributes.description}
             </ReactMarkdown>
           )}
+          <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+            <FacebookShareButton url={currentUrl}>
+              <FacebookIcon size={36} round={true}></FacebookIcon>
+            </FacebookShareButton>
+            <InstapaperShareButton url={currentUrl}>
+              <InstapaperIcon size={36} round={true}></InstapaperIcon>
+            </InstapaperShareButton>
+            <TwitterShareButton url={currentUrl}>
+              <TwitterIcon size={36} round={true}></TwitterIcon>
+            </TwitterShareButton>
+            <WhatsappShareButton url={currentUrl}>
+              <WhatsappIcon size={36} round={true}></WhatsappIcon>
+            </WhatsappShareButton>
+            <TelegramShareButton url={currentUrl}>
+              <TelegramIcon size={36} round={true}></TelegramIcon>
+            </TelegramShareButton>
+          </div>
         </div>
       </div>
     </div>
