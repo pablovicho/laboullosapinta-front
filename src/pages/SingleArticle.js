@@ -34,11 +34,12 @@ const SingleArticle = () => {
   }, []);
 
   const handleClick = () => {
+    setIsCopied(true);
     writeClipImg(currentUrl)
-      // setIsCopied(true);
-      // setTimeout(() => {
-      //   setIsCopied(false);
-      // }, 1500);
+      
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 1500);
   }
 
   if (
