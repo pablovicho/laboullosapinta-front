@@ -132,6 +132,24 @@ p {
   text-decoration: underline blue;
 }
 
+@keyframes slideIn {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.popup {
+  background-color: #161bcf;
+  border-radius: .7em;
+  padding: 0.4em;
+  animation-name: slidein;
+  animation-duration: 1s;
+  opacity: 0.8;
+}
+
 /* PHONE VIEW */
 
 @media (max-width: 500px) {

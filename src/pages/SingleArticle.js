@@ -34,13 +34,17 @@ const SingleArticle = () => {
   }, []);
 
   const handleClick = () => {
-    setIsCopied(true);
+    setIsCopied(true)
     writeClipImg(currentUrl)
-      
+  }
+
+  useEffect(()=>{
+    if(isCopied === true){
       setTimeout(() => {
         setIsCopied(false);
       }, 1500);
-  }
+    }
+  }, [isCopied])
 
   if (
     article.attributes === null ||
@@ -107,12 +111,14 @@ const SingleArticle = () => {
             <WhatsappShareButton className='shareButton' url={currentUrl}>
               <WhatsappIcon size={36} round={true}></WhatsappIcon>
             </WhatsappShareButton>
-            <button className='shareButton' style={{border:'none', background:'none'}} onClick={handleClick()}>
+            <button className='shareButton' style={{border:'none', background:'none'}} onClick={()=>handleClick()}>
               <img src="/shareIcon.png" alt="shareButton"
               style={{height:'36px', width:'36px'}}/>
             </button>
             {isCopied && 
-              <span>Copied!</span>
+              <div className='popup'>
+                <span style={{margin:'3px', color:'white'}}>Copied!</span>
+              </div>
             }
           </div>
         </div>
