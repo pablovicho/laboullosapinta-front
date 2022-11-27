@@ -1,23 +1,20 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import {
   FacebookShareButton,
-  InstapaperShareButton,
   WhatsappShareButton,
   TwitterShareButton,
-  TelegramShareButton,
   FacebookIcon,
-  InstapaperIcon,
   TwitterIcon,
   WhatsappIcon,
-  TelegramIcon,
 } from "react-share";
 
 import ArticleContext from "../context/Articles/ArticleContext";
 
 import extension from "../utils/extension";
 import typeOfMedia from "../utils/type";
+import writeClipImg from "../utils/clipboard";
 
 import MediaLoader from "../components/articles/MediaLoader";
 import SliderOrMedia from "../components/SliderOrMedia";
@@ -26,6 +23,7 @@ const SingleArticle = () => {
   const { id } = useParams();
   const { article, getArticle } = useContext(ArticleContext);
   const currentUrl = window.location.href;
+  const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
     // fetch data
@@ -36,7 +34,11 @@ const SingleArticle = () => {
   }, []);
 
   const handleClick = () => {
-    navigator.clipboard.writeText(currentUrl)
+    writeClipImg(currentUrl)
+      // setIsCopied(true);
+      // setTimeout(() => {
+      //   setIsCopied(false);
+      // }, 1500);
   }
 
   if (
@@ -108,6 +110,9 @@ const SingleArticle = () => {
               <img src="/shareIcon.png" alt="shareButton"
               style={{height:'36px', width:'36px'}}/>
             </button>
+            {isCopied && 
+              <span>Copied!</span>
+            }
           </div>
         </div>
       </div>

@@ -56,7 +56,7 @@ function ArticleCard(article) {
       <Card.Body>
       <Nav.Item>
           <Nav.Link href={`/articles/${article.article.id}`}>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title className='cardTitle'>{title}</Card.Title>
           </Nav.Link>
         </Nav.Item>
 
@@ -102,9 +102,9 @@ function ArticleCard(article) {
             
             
           <Card.Body>
-          <Nav.Item>
+          <Nav.Item className='cardTitleBox'>
               <Nav.Link href={`/articles/${article.article.id}`}>
-              <Card.Title>{title}</Card.Title>
+              <Card.Title className='cardTitle'>{title}</Card.Title>
               </Nav.Link>
             </Nav.Item>
               
