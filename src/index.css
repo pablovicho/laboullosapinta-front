@@ -118,7 +118,6 @@ p {
 }
 
 .cardTitle {
-  transition: 0.3s linear;
   font-size: 1.7em;
 }
 
@@ -126,28 +125,22 @@ p {
   text-align: center;
 }
 
-.cardTitle:hover {
-  transform: translate(0, -3px);
-  color: blue;
-  text-decoration: underline blue;
+.popup {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  background-color: #161bcf;
+  border-radius: .4em;
+  padding: 0.4em;
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0.7;
+  top: -5vh;
 }
 
 @keyframes slideIn {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-.popup {
-  background-color: #161bcf;
-  border-radius: .7em;
-  padding: 0.4em;
-  animation-name: slidein;
-  animation-duration: 1s;
-  opacity: 0.8;
+  0%{}
+  70%{transform: translateY(-30%)}
+  100%{transform: translateY(-27%)}
 }
 
 /* PHONE VIEW */

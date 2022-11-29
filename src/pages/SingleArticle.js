@@ -34,17 +34,17 @@ const SingleArticle = () => {
   }, []);
 
   const handleClick = () => {
-    setIsCopied(true)
-    writeClipImg(currentUrl)
-  }
+    setIsCopied(true);
+    writeClipImg(currentUrl);
+  };
 
-  useEffect(()=>{
-    if(isCopied === true){
+  useEffect(() => {
+    if (isCopied === true) {
       setTimeout(() => {
         setIsCopied(false);
       }, 1500);
     }
-  }, [isCopied])
+  }, [isCopied]);
 
   if (
     article.attributes === null ||
@@ -101,25 +101,33 @@ const SingleArticle = () => {
               {article.attributes.description}
             </ReactMarkdown>
           )}
-          <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-            <FacebookShareButton className='shareButton' url={currentUrl}>
+
+          <div style={{ display: "flex", flexDirection: "row", gap: "10px", position: "relative" }}>
+          {isCopied && (
+            <div className="popup">
+              <span style={{ margin: "3px", color: "white" }}>¡Copiado!</span>
+            </div>
+          )}
+            <FacebookShareButton className="shareButton" url={currentUrl}>
               <FacebookIcon size={36} round={true}></FacebookIcon>
             </FacebookShareButton>
-            <TwitterShareButton className='shareButton' url={currentUrl}>
+            <TwitterShareButton className="shareButton" url={currentUrl}>
               <TwitterIcon size={36} round={true}></TwitterIcon>
             </TwitterShareButton>
-            <WhatsappShareButton className='shareButton' url={currentUrl}>
+            <WhatsappShareButton className="shareButton" url={currentUrl}>
               <WhatsappIcon size={36} round={true}></WhatsappIcon>
             </WhatsappShareButton>
-            <button className='shareButton' style={{border:'none', background:'none'}} onClick={()=>handleClick()}>
-              <img src="/shareIcon.png" alt="shareButton"
-              style={{height:'36px', width:'36px'}}/>
+            <button
+              className="shareButton"
+              style={{ border: "none", background: "none" }}
+              onClick={() => handleClick()}
+            >
+              <img
+                src="/shareIcon.png"
+                alt="shareButton"
+                style={{ height: "36px", width: "36px" }}
+              />
             </button>
-            {isCopied && 
-              <div className='popup'>
-                <span style={{margin:'3px', color:'white'}}>Copied!</span>
-              </div>
-            }
           </div>
         </div>
       </div>
